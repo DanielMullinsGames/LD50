@@ -41,11 +41,21 @@ public class PromoCodeWindow : ManagedBehaviour
         if (input.ToLower() == "hatbuddy")
         {
             DeathHandler.Instance.AddHat();
+            PlaySuccessSound();
         }
         else if (input.ToLower() == "lionel.exe")
         {
-
+            PlaySuccessSound();
         }
+        else
+        {
+            AudioController.Instance.PlaySound2D("promo_fail");
+        }
+    }
+
+    private void PlaySuccessSound()
+    {
+        AudioController.Instance.PlaySound2D("promo_success");
     }
 
     private void UpdateKeyboardInput()

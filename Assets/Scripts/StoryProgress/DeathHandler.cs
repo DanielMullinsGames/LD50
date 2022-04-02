@@ -60,14 +60,19 @@ public class DeathHandler : Singleton<DeathHandler>
 
     public void AddHat()
     {
-        aliveBuddyHat.SetActive(true);
-        deadBuddyHat.SetActive(true);
+        CustomCoroutine.FlickerSequence(() => SetHatOn(true), () => SetHatOn(false), true, true, 0.1f, 4);
         CustomCoroutine.WaitThenExecute(0.5f, () => DialogueHandler.Instance.AddDialogueEventToStack(hatDialogue));
     }
 
     public void MarkAsDead()
     {
 
+    }
+
+    private void SetHatOn(bool on)
+    {
+        aliveBuddyHat.SetActive(on);
+        deadBuddyHat.SetActive(on);
     }
 
     private bool DeathIsMarked()
