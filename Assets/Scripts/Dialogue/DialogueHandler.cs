@@ -27,7 +27,7 @@ public class DialogueHandler : Singleton<DialogueHandler>
 
     public void AddDialogueEventToStack(DialogueEvent dialogueEvent)
     {
-        if (!playedEvents.Contains(dialogueEvent))
+        if (!playedEvents.Contains(dialogueEvent) && !DeathHandler.Instance.Dead)
         {
             if (eventStack.Count == 0 || eventStack.Peek().interruptBehaviour != DialogueEvent.InterruptBehaviour.Uninterruptable)
             {

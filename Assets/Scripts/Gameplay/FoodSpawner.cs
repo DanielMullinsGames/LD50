@@ -27,7 +27,7 @@ public class FoodSpawner : ManagedBehaviour
 
         obj.GetComponent<Rigidbody2D>().AddForce(Vector2.right * CustomRandom.RandomBetween(-50f, 50f));
 
-        if (activeFood.Count > 0)
+        if (activeFood.Count > 3)
         {
             DialogueHandler.Instance.AddDialogueEventToStack(dropFoodDialogues[0]);
         }

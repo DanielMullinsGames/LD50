@@ -27,11 +27,24 @@ public class PromoCodeWindow : ManagedBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Return))
             {
+                EvaluateInput();
                 window.SetActive(false);
             }
 
             UpdateKeyboardInput();
             inputText.text = input;
+        }
+    }
+
+    private void EvaluateInput()
+    {
+        if (input.ToLower() == "hatbuddy")
+        {
+            DeathHandler.Instance.AddHat();
+        }
+        else if (input.ToLower() == "lionel.exe")
+        {
+
         }
     }
 
