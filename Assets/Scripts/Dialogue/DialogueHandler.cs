@@ -79,7 +79,10 @@ public class DialogueHandler : Singleton<DialogueHandler>
         if (eventStack.Count == 0)
         {
             yield return new WaitForSeconds(0.5f);
-            dialogueText.Clear();
+            if (eventStack.Count == 0)
+            {
+                dialogueText.Clear();
+            }
         }
     }
 

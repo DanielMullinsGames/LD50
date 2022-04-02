@@ -27,29 +27,33 @@ public class FoodSpawner : ManagedBehaviour
 
         obj.GetComponent<Rigidbody2D>().AddForce(Vector2.right * CustomRandom.RandomBetween(-50f, 50f));
 
-        if (activeFood.Count > 3)
+        if (activeFood.Count == 3)
         {
             DialogueHandler.Instance.AddDialogueEventToStack(dropFoodDialogues[0]);
         }
-        if (activeFood.Count > 20)
+        if (activeFood.Count == 20)
         {
             DialogueHandler.Instance.AddDialogueEventToStack(dropFoodDialogues[1]);
         }
-        if (activeFood.Count > 50)
+        if (activeFood.Count == 50)
         {
             DialogueHandler.Instance.AddDialogueEventToStack(dropFoodDialogues[2]);
-            CustomCoroutine.WaitOnConditionThenExecute(() => DialogueHandler.Instance.CurrentEvent != dropFoodDialogues[2], 
-                () => clearFoodButton.Show());
+
+            if (!DeathHandler.Instance.Dead)
+            {
+                CustomCoroutine.WaitOnConditionThenExecute(() => DialogueHandler.Instance.CurrentEvent != dropFoodDialogues[2],
+                    () => clearFoodButton.Show());
+            }
         }
-        if (activeFood.Count > 100)
+        if (activeFood.Count == 100)
         {
             DialogueHandler.Instance.AddDialogueEventToStack(dropFoodDialogues[3]);
         }
-        if (activeFood.Count > 300)
+        if (activeFood.Count == 300)
         {
             DialogueHandler.Instance.AddDialogueEventToStack(dropFoodDialogues[4]);
         }
-        if (activeFood.Count > 1000)
+        if (activeFood.Count == 1000)
         {
             DialogueHandler.Instance.AddDialogueEventToStack(dropFoodDialogues[5]);
         }
