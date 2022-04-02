@@ -447,6 +447,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7372914427532887075}
+  - component: {fileID: 4340839719895930017}
   - component: {fileID: 7372914427532887074}
   m_Layer: 6
   m_Name: Mouth
@@ -470,6 +471,22 @@ Transform:
   m_Father: {fileID: 7372914427244547639}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4340839719895930017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7372914427532887076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54b741fe8439c884f9ec42ae356da593, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openSprites:
+  - {fileID: 277388947, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
+  closedSprites:
+  - {fileID: 1138124232, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
 --- !u!212 &7372914427532887074
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -660,6 +677,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7372914428237765058}
+  - component: {fileID: 3442084014080700564}
   - component: {fileID: 7372914428237765057}
   m_Layer: 6
   m_Name: Eyes
@@ -683,6 +701,26 @@ Transform:
   m_Father: {fileID: 7372914427244547639}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3442084014080700564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7372914428237765059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8960b839163b75438fde44477e13f25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalFrequency: 3
+  volatility: 0
+  unscaledTime: 0
+  doubleBlinkChance: 0.3
+  openSprites:
+  - {fileID: -543645894, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
+  closedSprites:
+  - {fileID: 1081450933, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
 --- !u!212 &7372914428237765057
 SpriteRenderer:
   m_ObjectHideFlags: 0
