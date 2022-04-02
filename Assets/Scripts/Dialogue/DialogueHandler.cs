@@ -5,6 +5,7 @@ using UnityEngine;
 public class DialogueHandler : Singleton<DialogueHandler>
 {
     public bool NoDialoguePlaying => eventStack.Count == 0;
+    public DialogueEvent CurrentEvent => NoDialoguePlaying ? null : eventStack.Peek();
 
     [SerializeField]
     private DialogueText dialogueText = default;

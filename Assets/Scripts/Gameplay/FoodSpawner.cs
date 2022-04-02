@@ -5,6 +5,12 @@ using UnityEngine;
 public class FoodSpawner : ManagedBehaviour
 {
     [SerializeField]
+    private UIButton clearFoodButton = default;
+
+    [SerializeField]
+    private DialogueEvent clearedFoodEvent = default;
+
+    [SerializeField]
     private List<GameObject> foodPrefabs = default;
 
     [SerializeField]
@@ -32,6 +38,8 @@ public class FoodSpawner : ManagedBehaviour
         if (activeFood.Count > 50)
         {
             DialogueHandler.Instance.AddDialogueEventToStack(dropFoodDialogues[2]);
+            CustomCoroutine.WaitOnConditionThenExecute(() => DialogueHandler.Instance.CurrentEvent != dropFoodDialogues[2], 
+                () => clearFoodButton.Show());
         }
         if (activeFood.Count > 100)
         {
@@ -54,5 +62,6 @@ public class FoodSpawner : ManagedBehaviour
     public void ClearFood()
     {
         activeFood.ForEach(x => Destroy(x));
+        DialogueHandler.Instance.AddDialogueEventToStack(clearedFoodEvent);
     }
 }

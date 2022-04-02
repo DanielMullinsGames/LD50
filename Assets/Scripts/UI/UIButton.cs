@@ -15,6 +15,17 @@ public class UIButton : Interactable2D
     [SerializeField]
     private Vector2 mouseOverOffset = default;
 
+    [SerializeField]
+    private bool startHidden = false;
+
+    private void Start()
+    {
+        if (startHidden)
+        {
+            SetHidden();
+        }
+    }
+
     public void SetHidden()
     {
         buttonRenderer.transform.localPosition = new Vector2(mouseOverOffset.x * -10f, 0f);
