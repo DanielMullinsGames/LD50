@@ -219,7 +219,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 82ea68a891e7c26409bab7973a21460d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -241,7 +241,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: fe9330aa2c24a8b459c7e1484b963e1a, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -757,8 +757,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77ebd75cce3b27744ae8c063d06c13b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  referenceHeightMin: 240
-  referenceHeightMax: 280
+  referenceHeightMin: 160
+  referenceHeightMax: 180
   referenceHeightMultiplier: 1
   minAspectRatio: 1.75
   renderTextureSetter: {fileID: 1539995551464112833}
