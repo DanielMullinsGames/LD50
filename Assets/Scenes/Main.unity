@@ -774,6 +774,11 @@ MonoBehaviour:
   - {fileID: 6092659537098567036, guid: b0b95458fdfc1b54ea52d0e71514be47, type: 3}
   dropFoodDialogues:
   - {fileID: 11400000, guid: 9a765ac133abf34449d2c19a6c26fdab, type: 2}
+  - {fileID: 11400000, guid: 097d9b26d68b9cc438694447f076ed51, type: 2}
+  - {fileID: 11400000, guid: fbd1cb953bbb0b74eae83b019f05234b, type: 2}
+  - {fileID: 11400000, guid: 0a9322c62c96a0948abf16c9749d13da, type: 2}
+  - {fileID: 11400000, guid: 5f577ef7efec49f4cbf37a557187c2b4, type: 2}
+  - {fileID: 11400000, guid: 9c9f2ad71672de043aff0a8a5cf6d0e7, type: 2}
 --- !u!1 &699501558
 GameObject:
   m_ObjectHideFlags: 0

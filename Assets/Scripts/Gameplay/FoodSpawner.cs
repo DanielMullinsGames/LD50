@@ -10,14 +10,49 @@ public class FoodSpawner : ManagedBehaviour
     [SerializeField]
     private List<DialogueEvent> dropFoodDialogues = new List<DialogueEvent>();
 
+    private List<GameObject> activeFood = new List<GameObject>();
+
     public void SpawnFood()
     {
         var obj = Instantiate(foodPrefabs[Random.Range(0, foodPrefabs.Count)]);
         obj.transform.position = transform.position;
         obj.transform.SetParent(transform);
+        activeFood.Add(obj);
 
         obj.GetComponent<Rigidbody2D>().AddForce(Vector2.right * CustomRandom.RandomBetween(-50f, 50f));
 
-        DialogueHandler.Instance.AddDialogueEventToStack(dropFoodDialogues[0]);
+        if (activeFood.Count > 0)
+        {
+            DialogueHandler.Instance.AddDialogueEventToStack(dropFoodDialogues[0]);
+        }
+        if (activeFood.Count > 20)
+        {
+            DialogueHandler.Instance.AddDialogueEventToStack(dropFoodDialogues[1]);
+        }
+        if (activeFood.Count > 50)
+        {
+            DialogueHandler.Instance.AddDialogueEventToStack(dropFoodDialogues[2]);
+        }
+        if (activeFood.Count > 100)
+        {
+            DialogueHandler.Instance.AddDialogueEventToStack(dropFoodDialogues[3]);
+        }
+        if (activeFood.Count > 300)
+        {
+            DialogueHandler.Instance.AddDialogueEventToStack(dropFoodDialogues[4]);
+        }
+        if (activeFood.Count > 1000)
+        {
+            DialogueHandler.Instance.AddDialogueEventToStack(dropFoodDialogues[5]);
+        }
+        if (activeFood.Count > 1100)
+        {
+            Application.Quit();
+        }
+    }
+
+    public void ClearFood()
+    {
+        activeFood.ForEach(x => Destroy(x));
     }
 }

@@ -16,6 +16,7 @@ public class DialogueHandler : Singleton<DialogueHandler>
     private DialogueEvent resumeLines = default;
 
     private Stack<DialogueEvent> eventStack = new Stack<DialogueEvent>();
+    private List<DialogueEvent> playedEvents = new List<DialogueEvent>();
 
     private void Start()
     {
@@ -25,14 +26,19 @@ public class DialogueHandler : Singleton<DialogueHandler>
 
     public void AddDialogueEventToStack(DialogueEvent dialogueEvent)
     {
-        if (eventStack.Count == 0 || eventStack.Peek().interruptBehaviour != DialogueEvent.InterruptBehaviour.Uninterruptable)
+        if (!playedEvents.Contains(dialogueEvent))
         {
-            StartCoroutine(PlayDialogueEvent(dialogueEvent));
+            if (eventStack.Count == 0 || eventStack.Peek().interruptBehaviour != DialogueEvent.InterruptBehaviour.Uninterruptable)
+            {
+                StartCoroutine(PlayDialogueEvent(dialogueEvent));
+            }
         }
     }
 
     private IEnumerator PlayDialogueEvent(DialogueEvent dialogueEvent)
     {
+        playedEvents.Add(dialogueEvent);
+
         eventStack.Push(dialogueEvent);
         dialogueText.Clear();
 
