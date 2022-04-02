@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProgressionSequencer : MonoBehaviour
+public class IntroSequencer : MonoBehaviour
 {
     [SerializeField]
     private List<DialogueEvent> introEvents = default;
@@ -19,7 +19,8 @@ public class ProgressionSequencer : MonoBehaviour
     {
         initialButtons.ForEach(x => x.SetHidden());
         yield return new WaitForSeconds(1f);
-        yield return DialogueHandler.Instance.PlayDialogueEvent(introEvents[0]);
+        DialogueHandler.Instance.AddDialogueEventToStack(introEvents[0]);
+        yield return new WaitUntil(() => DialogueHandler.Instance.NoDialoguePlaying);
         foreach (var button in initialButtons)
         {
             button.Show();

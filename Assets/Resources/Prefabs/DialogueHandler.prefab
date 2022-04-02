@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 137621326665534856}
   mouth: {fileID: 0}
+  resumeLines: {fileID: 11400000, guid: 7007af2197b6b6d45844ab64781174eb, type: 2}
 --- !u!114 &137621326665534856
 MonoBehaviour:
   m_ObjectHideFlags: 0
