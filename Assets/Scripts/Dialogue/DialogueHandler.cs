@@ -14,13 +14,18 @@ public class DialogueHandler : Singleton<DialogueHandler>
     {
         dialogueText.DisplayCharacter += OnDisplayCharacter;
         dialogueText.CompletedLine += OnMessageEnded;
-
-        PlayLine("Don't close this window.");
     }
 
-    public void PlayLine(string line)
+    public IEnumerator PlayDialogueEvent(DialogueEvent dialogueEvent)
     {
-        dialogueText.PlayMessage(line);
+        foreach (string line in dialogueEvent.lines)
+        {
+            dialogueText.PlayMessage(line);
+            yield return new WaitUntil(() => !dialogueText.PlayingMessage);
+            yield return new WaitForSeconds(0.1f);
+        }
+        yield return new WaitForSeconds(0.5f);
+        dialogueText.Clear();
     }
 
     private void OnDisplayCharacter(string message, int index)
