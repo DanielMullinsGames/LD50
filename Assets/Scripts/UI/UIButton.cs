@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Pixelplacement;
+using UnityEngine.Events;
 
 public class UIButton : Interactable2D
 {
+    [SerializeField]
+    private UnityEvent onSelectEndEvent = default;
+
     [SerializeField]
     private SpriteRenderer buttonRenderer = default;
 
@@ -41,5 +45,7 @@ public class UIButton : Interactable2D
         CustomCoroutine.WaitThenExecute(0.1f, () => buttonRenderer.enabled = true);
         ScreenEffectsController.Instance.AddThenSubtractIntensity(ScreenEffect.RenderCanvasShake, 0.05f, 0.05f, 0.05f, 0.1f);
         AudioController.Instance.PlaySound2D("button_press_chunk", 1f, pitch: new AudioParams.Pitch(AudioParams.Pitch.Variation.Small));
+
+        onSelectEndEvent?.Invoke();
     }
 }
