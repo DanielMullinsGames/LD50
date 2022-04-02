@@ -18,6 +18,9 @@ public class UIButton : Interactable2D
     [SerializeField]
     private bool startHidden = false;
 
+    [SerializeField]
+    private bool playEffects = true;
+
     private void Start()
     {
         if (startHidden)
@@ -52,10 +55,13 @@ public class UIButton : Interactable2D
 
     protected override void OnCursorSelectEnd()
     {
-        buttonRenderer.enabled = false;
-        CustomCoroutine.WaitThenExecute(0.1f, () => buttonRenderer.enabled = true);
-        ScreenEffectsController.Instance.AddThenSubtractIntensity(ScreenEffect.RenderCanvasShake, 0.05f, 0.05f, 0.05f, 0.1f);
-        AudioController.Instance.PlaySound2D("button_press_chunk", 1f, pitch: new AudioParams.Pitch(AudioParams.Pitch.Variation.Small));
+        if (playEffects)
+        {
+            buttonRenderer.enabled = false;
+            CustomCoroutine.WaitThenExecute(0.1f, () => buttonRenderer.enabled = true);
+            ScreenEffectsController.Instance.AddThenSubtractIntensity(ScreenEffect.RenderCanvasShake, 0.05f, 0.05f, 0.05f, 0.1f);
+            AudioController.Instance.PlaySound2D("button_press_chunk", 1f, pitch: new AudioParams.Pitch(AudioParams.Pitch.Variation.Small));
+        }
 
         onSelectEndEvent?.Invoke();
     }
