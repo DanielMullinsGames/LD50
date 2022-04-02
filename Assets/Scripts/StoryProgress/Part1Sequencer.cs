@@ -14,7 +14,7 @@ public class Part1Sequencer : ManagedBehaviour
 
     IEnumerator IntroSequence()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3f);
         DialogueHandler.Instance.AddDialogueEventToStack(events[0]);
         yield return new WaitUntil(() => DialogueHandler.Instance.NoDialoguePlaying);
     }

@@ -48,10 +48,7 @@ public class DialogueHandler : Singleton<DialogueHandler>
         {
             if (eventStack.Peek() != dialogueEvent)
             {
-                while (eventStack.Peek() != dialogueEvent)
-                {
-                    yield return new WaitForEndOfFrame();
-                }
+                yield return new WaitWhile(() => eventStack.Peek() != dialogueEvent);
 
                 switch (dialogueEvent.interruptBehaviour)
                 {
@@ -75,6 +72,7 @@ public class DialogueHandler : Singleton<DialogueHandler>
             }
         }
 
+        yield return new WaitWhile(() => eventStack.Peek() != dialogueEvent);
         eventStack.Pop();
         if (eventStack.Count == 0)
         {
