@@ -478,8 +478,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d11abcf970e9fdb438cb9b5caad4f97d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  events:
+  dialogueEvents:
   - {fileID: 11400000, guid: 6098e67eb86000042882f34b38ddba01, type: 2}
+  waitBeforeNext: 0
+  activateWhenComplete: {fileID: 0}
 --- !u!114 &319242612 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9121529763969385555, guid: f1c03c4d72dee164f9a6c67ac050ba09, type: 3}
@@ -1103,9 +1105,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c93149d6ce37e404baf886211ac665f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  introEvents:
+  dialogueEvents:
   - {fileID: 11400000, guid: 1c0487b82589fa443ae253bb94c9754f, type: 2}
   - {fileID: 11400000, guid: 956ddeb179d56d04393a02c73877de23, type: 2}
+  waitBeforeNext: 12
+  activateWhenComplete: {fileID: 303832051}
   initialButtons:
   - {fileID: 2137578006}
   - {fileID: 1332840859}
@@ -2078,7 +2082,7 @@ MonoBehaviour:
   firstSequencer: {fileID: 1107293459}
   hatDialogue: {fileID: 11400000, guid: ade948523f7fbea4493ca5d9b146d684, type: 2}
   debugDead: 0
-  debugDontStartIntro: 0
+  debugDontStartIntro: 1
 --- !u!114 &2126428772 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6738841716831009136, guid: 7278fac62fa96714993c314bdcd927c1, type: 3}

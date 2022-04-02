@@ -2,20 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Part1Sequencer : ManagedBehaviour
+public class Part1Sequencer : Sequencer
 {
-    [SerializeField]
-    private List<DialogueEvent> events = default;
-
-    private void Start()
+    protected override IEnumerator Sequence()
     {
-        StartCoroutine(IntroSequence());
-    }
-
-    IEnumerator IntroSequence()
-    {
-        yield return new WaitForSeconds(3f);
-        DialogueHandler.Instance.AddDialogueEventToStack(events[0]);
+        DialogueHandler.Instance.AddDialogueEventToStack(dialogueEvents[0]);
         yield return new WaitUntil(() => DialogueHandler.Instance.NoDialoguePlaying);
     }
 }

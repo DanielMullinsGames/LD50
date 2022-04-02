@@ -2,29 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IntroSequencer : MonoBehaviour
+public class IntroSequencer : Sequencer
 {
-    [SerializeField]
-    private List<DialogueEvent> introEvents = default;
-
     [SerializeField]
     private List<UIButton> initialButtons = default;
 
-    private void Start()
-    {
-        StartCoroutine(IntroSequence());
-    }
-
-    IEnumerator IntroSequence()
+    protected override IEnumerator Sequence()
     {
         initialButtons.ForEach(x => x.SetHidden());
         yield return new WaitForSeconds(1f);
-        DialogueHandler.Instance.AddDialogueEventToStack(introEvents[0]);
+        DialogueHandler.Instance.AddDialogueEventToStack(dialogueEvents[0]);
         yield return new WaitUntil(() => DialogueHandler.Instance.NoDialoguePlaying);
 
         DeathHandler.Instance.MarkAsDead();
 
-        DialogueHandler.Instance.AddDialogueEventToStack(introEvents[1]);
+        DialogueHandler.Instance.AddDialogueEventToStack(dialogueEvents[1]);
         yield return new WaitUntil(() => DialogueHandler.Instance.NoDialoguePlaying);
         foreach (var button in initialButtons)
         {
