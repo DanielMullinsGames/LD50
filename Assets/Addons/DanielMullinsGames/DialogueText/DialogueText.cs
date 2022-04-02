@@ -77,18 +77,20 @@ public class DialogueText : ManagedBehaviour
         uiText.text = unformattedMessage;
         Canvas.ForceUpdateCanvases();
 
+        int index = 0;
         foreach (var pair in CustomUI.GetTextLetterPositions(uiText))
         {
-            spawnedLetters.Add(SpawnLetter(pair.Value, pair.Key));
+            spawnedLetters.Add(SpawnLetter(pair.Value, pair.Key, index));
+            index++;
         }
 
         uiText.text = "";
     }
 
-    private Text SpawnLetter(char c, Vector3 pos)
+    private Text SpawnLetter(char c, Vector3 pos, int index)
     {
         pos.x = Mathf.Round(pos.x * 100) / 100;
-        pos.y = 0f;
+        pos.y = transform.position.y;
         
         var obj = new GameObject(c.ToString());
         obj.transform.SetParent(uiText.transform.parent);
@@ -103,7 +105,15 @@ public class DialogueText : ManagedBehaviour
         letter.lineSpacing = uiText.lineSpacing;
         letter.alignment = TextAnchor.MiddleCenter;
         letter.raycastTarget = false;
+        letter.color = currentColor;
 
+        /*
+        var movement = letter.gameObject.AddComponent<SineWaveMovement>();
+        movement.speed = 4f;
+        movement.magnitude = new Vector3(0f, 3.5f, 0f);
+        movement.timeOffset = index * 0.25f;
+        */
+    
         return letter;
     }
 

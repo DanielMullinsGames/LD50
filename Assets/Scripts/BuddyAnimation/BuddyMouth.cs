@@ -13,6 +13,12 @@ public class BuddyMouth : ManagedBehaviour
     private Emotion currentEmotion = Emotion.Neutral;
     private bool mouthClosed = false;
 
+    public void ToggleOpen()
+    {
+        mouthClosed = !mouthClosed;
+        SetOpen(!mouthClosed);
+    }
+
     public void SetOpen(bool open)
     {
         mouthClosed = !open;
