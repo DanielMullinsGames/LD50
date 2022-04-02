@@ -187,6 +187,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: ui_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 144
+        width: 14
+        height: 15
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d837414afd6a3a94ba2686cde74facbc
+      internalID: 1918066351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -201,6 +222,7 @@ TextureImporter:
       ui_sheet_1: 1304985193
       ui_sheet_0: -2031072664
       ui_sheet_3: 327910410
+      ui_sheet_4: 1918066351
       ui_sheet_2: -1657495236
   spritePackingTag: 
   pSDRemoveMatte: 0

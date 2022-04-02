@@ -53,3 +53,6 @@ TagManager:
   - name: UI
     uniqueID: 3196885993
     locked: 0
+  - name: Cursor
+    uniqueID: 1365854307
+    locked: 0

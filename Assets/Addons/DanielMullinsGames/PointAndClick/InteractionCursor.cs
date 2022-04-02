@@ -114,7 +114,7 @@ public class InteractionCursor : Singleton<InteractionCursor>
         Vector2 screenPoint = new Vector2(mousePos.x * widthModifier, mousePos.y * heightModifier);
         Vector2 cursorPos = rayCamera.ScreenToWorldPoint(screenPoint);
         cursorPos = Vector2.Lerp(cursorPos, pullPoint, pullStrength);
-        transform.position = new Vector3(cursorPos.x, cursorPos.y, rayCamera.nearClipPlane);
+        transform.position = new Vector3(cursorPos.x, cursorPos.y, 0f);
     }
 
     private void SetCursorType(CursorType type)
