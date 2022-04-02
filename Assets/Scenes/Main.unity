@@ -1105,6 +1105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   introEvents:
   - {fileID: 11400000, guid: 1c0487b82589fa443ae253bb94c9754f, type: 2}
+  - {fileID: 11400000, guid: 956ddeb179d56d04393a02c73877de23, type: 2}
   initialButtons:
   - {fileID: 2137578006}
   - {fileID: 1332840859}
@@ -2077,7 +2078,7 @@ MonoBehaviour:
   firstSequencer: {fileID: 1107293459}
   hatDialogue: {fileID: 11400000, guid: ade948523f7fbea4493ca5d9b146d684, type: 2}
   debugDead: 0
-  debugDontStartIntro: 1
+  debugDontStartIntro: 0
 --- !u!114 &2126428772 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6738841716831009136, guid: 7278fac62fa96714993c314bdcd927c1, type: 3}

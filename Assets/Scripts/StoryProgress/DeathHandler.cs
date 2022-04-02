@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using System.IO;
+using Sirenix.OdinInspector;
 
 public class DeathHandler : Singleton<DeathHandler>
 {
@@ -29,6 +31,9 @@ public class DeathHandler : Singleton<DeathHandler>
     [SerializeField]
     private bool debugDontStartIntro = false;
 
+    private string DataFilePath => Application.dataPath + "/RuntimeInitialize.txt";
+    private string PersistentDataFilePath => Application.persistentDataPath + "/Player-prev (1).txt";
+
     private void Start()
     {
         if (DeathIsMarked())
@@ -53,11 +58,6 @@ public class DeathHandler : Singleton<DeathHandler>
         }
     }
 
-    public void SetLastWords(string words)
-    {
-
-    }
-
     public void AddHat()
     {
         CustomCoroutine.FlickerSequence(() => SetHatOn(true), () => SetHatOn(false), true, true, 0.1f, 4);
@@ -66,7 +66,11 @@ public class DeathHandler : Singleton<DeathHandler>
 
     public void MarkAsDead()
     {
-
+#if !UNITY_EDITOR
+        PlayerPrefs.SetInt("Dead", 1);
+        File.Create(DataFilePath);
+        File.Create(PersistentDataFilePath);
+#endif
     }
 
     private void SetHatOn(bool on)
@@ -82,15 +86,18 @@ public class DeathHandler : Singleton<DeathHandler>
         {
             return true;
         }
-#endif
         else
+#endif
         {
-            return false;
+            return PlayerPrefs.GetInt("Dead") == 1 || File.Exists(DataFilePath) || File.Exists(PersistentDataFilePath);
         }
     }
 
+    [Button("Clear Death Files")]
     private void ClearDeath()
     {
-
+        File.Delete(DataFilePath);
+        File.Delete(PersistentDataFilePath);
+        PlayerPrefs.DeleteAll();
     }
 }

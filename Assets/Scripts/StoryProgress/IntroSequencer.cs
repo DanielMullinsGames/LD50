@@ -21,6 +21,11 @@ public class IntroSequencer : MonoBehaviour
         yield return new WaitForSeconds(1f);
         DialogueHandler.Instance.AddDialogueEventToStack(introEvents[0]);
         yield return new WaitUntil(() => DialogueHandler.Instance.NoDialoguePlaying);
+
+        DeathHandler.Instance.MarkAsDead();
+
+        DialogueHandler.Instance.AddDialogueEventToStack(introEvents[1]);
+        yield return new WaitUntil(() => DialogueHandler.Instance.NoDialoguePlaying);
         foreach (var button in initialButtons)
         {
             button.Show();
