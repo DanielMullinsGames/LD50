@@ -682,6 +682,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7372914427805977220}
+  - component: {fileID: 2189817687206492851}
   m_Layer: 6
   m_Name: Buddy
   m_TagString: Untagged
@@ -705,6 +706,40 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2189817687206492851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7372914427805977221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7be60aba89d37941855d4d41ae1a05d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  headRenderer: {fileID: 7372914427244547638}
+  bodyRenderer: {fileID: 7372914427196926957}
+  coloredRenderers:
+  - {fileID: 7372914427244547638}
+  - {fileID: 7372914427196926957}
+  - {fileID: 7372914428342025751}
+  - {fileID: 7372914426873021223}
+  - {fileID: 7372914426540062480}
+  - {fileID: 7372914427828542496}
+  headSprites:
+  - {fileID: 1616828446, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
+  - {fileID: 2108487374, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
+  - {fileID: 238423466, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
+  - {fileID: -1908552352, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
+  bodySprites:
+  - {fileID: -1048508999, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
+  - {fileID: -1692842252, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
+  - {fileID: 802142134, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
+  spriteColors:
+  - {r: 0.45882356, g: 0.7568628, b: 0.7725491, a: 1}
+  - {r: 0.16862746, g: 0.7372549, b: 0.3529412, a: 1}
+  - {r: 0.27058825, g: 0.73333335, b: 0.6313726, a: 1}
 --- !u!1 &7372914427828542498
 GameObject:
   m_ObjectHideFlags: 0
