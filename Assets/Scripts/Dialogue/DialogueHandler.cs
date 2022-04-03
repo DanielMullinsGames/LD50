@@ -72,7 +72,7 @@ public class DialogueHandler : Singleton<DialogueHandler>
             {
                 dialogueText.PlayMessage(line);
                 yield return new WaitUntil(() => !dialogueText.PlayingMessage || eventStack.Peek() != dialogueEvent);
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(0.15f);
             }
         }
 
@@ -80,7 +80,7 @@ public class DialogueHandler : Singleton<DialogueHandler>
         eventStack.Pop();
         if (eventStack.Count == 0)
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.75f);
             if (eventStack.Count == 0)
             {
                 dialogueText.Clear();
@@ -98,7 +98,7 @@ public class DialogueHandler : Singleton<DialogueHandler>
     {
         mouth.ToggleOpen();
         AudioController.Instance.PlaySound2D("buddy_voice_1", pitch: new AudioParams.Pitch(AudioParams.Pitch.Variation.VerySmall), 
-            repetition: new AudioParams.Repetition(0.05f));
+            repetition: new AudioParams.Repetition(0.075f));
     }
 
     private void OnMessageEnded()

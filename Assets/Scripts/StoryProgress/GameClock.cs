@@ -11,6 +11,11 @@ public class GameClock : Singleton<GameClock>
 
     public const float MAX_TIME = 48f * 60f * 60f;
 
+    private void Start()
+    {
+        Application.targetFrameRate = 60;
+    }
+
     public override void ManagedUpdate()
     {
         Timer += Time.deltaTime;

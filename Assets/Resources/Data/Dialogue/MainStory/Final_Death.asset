@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interruptBehaviour: 2
   lines:
-  - '[t:100]I think this is it.[w:1]'
-  - '[t:100]I feel it.[w:1]'
-  - '[e:Sad][t:125]I will...[w:1]'
-  - '[e:Sad][t:150]Never forget...[w:1]'
+  - '[t:50]I think this is it.[w:1]'
+  - '[t:50]I feel it.[w:1]'
+  - '[e:Sad][t:75]I will...[w:1]'
+  - '[e:Sad][t:75]Never forget...[w:1]'
   - '[t:200]Our holiday...[w:1]'

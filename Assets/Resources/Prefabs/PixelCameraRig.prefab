@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onlyX: 0
-  jitterSpeed: 100
+  jitterSpeed: 50
   jitterFrequency: 0.01
   toFullExtent: 0
   amount: 0

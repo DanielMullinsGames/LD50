@@ -56,6 +56,7 @@ public class JitterPosition : ManagedBehaviour
 
 	private void ApplyJitter(Vector2 jitterValue) 
 	{
-		transform.localPosition = new Vector3 (originalPos.x + jitterValue.x * amount, originalPos.y + (onlyX ? 0f : jitterValue.y * amount), transform.localPosition.z); 
+        float adjustedAmount = amount / (200f * Time.deltaTime);
+		transform.localPosition = new Vector3 (originalPos.x + jitterValue.x * adjustedAmount, originalPos.y + (onlyX ? 0f : jitterValue.y * adjustedAmount), transform.localPosition.z); 
 	}
 }

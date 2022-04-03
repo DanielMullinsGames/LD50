@@ -27,7 +27,7 @@ public class DialogueText : ManagedBehaviour
     private bool skipToEnd;
 
     private const float DEFAULT_FREQUENCY = 7.5f;
-    private const float DIALOGUE_SPEED = 1f;
+    private const float DIALOGUE_SPEED = 6f;
 
     [SerializeField]
     private Color defaultColor = Color.black;
@@ -107,13 +107,6 @@ public class DialogueText : ManagedBehaviour
         letter.alignment = TextAnchor.MiddleCenter;
         letter.raycastTarget = false;
         letter.color = currentColor;
-
-        /*
-        var movement = letter.gameObject.AddComponent<SineWaveMovement>();
-        movement.speed = 4f;
-        movement.magnitude = new Vector3(0f, 3.5f, 0f);
-        movement.timeOffset = index * 0.25f;
-        */
     
         return letter;
     }
@@ -197,7 +190,7 @@ public class DialogueText : ManagedBehaviour
         else if (code.StartsWith("[w"))
         {
             float waitTimer = 0f;
-            float waitLength = DialogueParser.GetFloatValue(code, "w");
+            float waitLength = DialogueParser.GetFloatValue(code, "w") * DIALOGUE_SPEED;
 
             while (!skipToEnd && waitTimer < waitLength)
             {
