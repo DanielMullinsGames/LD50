@@ -11,6 +11,9 @@ public class IntroSequencer : Sequencer
     {
         initialButtons.ForEach(x => x.SetHidden());
         yield return new WaitForSeconds(1f);
+
+        yield return new WaitUntil(() => Input.anyKeyDown);
+
         DialogueHandler.Instance.AddDialogueEventToStack(dialogueEvents[0]);
         yield return new WaitUntil(() => DialogueHandler.Instance.NoDialoguePlaying);
 
