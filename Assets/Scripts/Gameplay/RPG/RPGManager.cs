@@ -59,6 +59,8 @@ public class RPGManager : Singleton<RPGManager>
 
     private IEnumerator GameLoop()
     {
+        yield return new WaitForSeconds(3f);
+
         while (player.Alive)
         {
             yield return new WaitForSeconds(0.6f);
@@ -77,7 +79,7 @@ public class RPGManager : Singleton<RPGManager>
                 AudioController.Instance.PlaySound2D("enemy_die", 0.7f);
                 ScreenEffectsController.Instance.AddThenSubtractIntensity(ScreenEffect.RenderCanvasShake, 0.05f, 0.05f, 0.05f, 0.1f);
 
-                int expToNextLevel = Mathf.RoundToInt(Mathf.Pow(GameStatus.buddyLevel * 10f, 1.025f));
+                int expToNextLevel = Mathf.RoundToInt(Mathf.Pow(GameStatus.buddyLevel * 10f, 1.015f));
                 expBar.ShowAmount(playerExp / (float)expToNextLevel);
                 yield return new WaitForSeconds(0.5f);
 

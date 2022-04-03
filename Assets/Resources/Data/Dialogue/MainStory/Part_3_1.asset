@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8457d4647e2ef3a408d1f106ee40b463, type: 3}
+  m_Name: Part_3_1
+  m_EditorClassIdentifier: 
+  interruptBehaviour: 2
+  lines:
+  - OK I know that wasn't...[w:0.3]
+  - '[e:Sad]Like...[w:0.3]'
+  - THAT fun.[w:1]
+  - But this free trial[w:0.2]
+  - has a few more surprises.[w:0.75]
+  - So please...[w:0.3][e:Shocked] don't quit yet!

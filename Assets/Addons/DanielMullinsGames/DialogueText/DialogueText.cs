@@ -43,7 +43,7 @@ public class DialogueText : ManagedBehaviour
 
         if (Active)
         {
-            StartCoroutine(PlayMessageSequence(message.Replace("#NAME#", BuddyNameGenerator.GetName())));
+            StartCoroutine(PlayMessageSequence(message.Replace("#NAME#", BuddyNameGenerator.GetName()).Replace("#LEVEL#", GameStatus.buddyLevel.ToString())));
         }
     }
 

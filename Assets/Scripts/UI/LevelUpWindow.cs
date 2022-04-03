@@ -77,7 +77,7 @@ public class LevelUpWindow : MonoBehaviour
                 player.critMultiplier += 1;
                 break;
             case LevelUpChoice.MaxHealth:
-                player.maxHealth += 5;
+                player.maxHealth += 10;
                 break;
         }
     }

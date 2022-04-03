@@ -206,6 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57cf55cf2b2d55d409fbbe972783ec16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  promoCodeWindow: {fileID: 0}
   levelUpWindow: {fileID: 2405662585163543254}
   player: {fileID: 2178845616544594622}
   playerText: {fileID: 4880209148324576236}
@@ -248,8 +249,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 3124950748445276305}
   anim: {fileID: 1598321655065320655}
-  maxHealth: 35
-  health: 35
+  maxHealth: 40
+  health: 40
   attackPower: 3
   critChance: 0.1
   critMultiplier: 2
