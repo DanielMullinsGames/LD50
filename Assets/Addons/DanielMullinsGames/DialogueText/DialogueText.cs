@@ -27,7 +27,11 @@ public class DialogueText : ManagedBehaviour
     private bool skipToEnd;
 
     private const float DEFAULT_FREQUENCY = 7.5f;
+#if UNITY_EDITOR
     private const float DIALOGUE_SPEED = 6f;
+#else
+    private const float DIALOGUE_SPEED = 1f;
+#endif
 
     [SerializeField]
     private Color defaultColor = Color.black;
