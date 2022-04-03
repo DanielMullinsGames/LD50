@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class DeathHandler : Singleton<DeathHandler>
 {
-    public bool Dead { get; private set; }
+    public bool Dead { get; set; }
 
     [SerializeField]
     private GameObject aliveBuddy = default;

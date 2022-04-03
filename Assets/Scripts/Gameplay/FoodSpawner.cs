@@ -56,15 +56,15 @@ public class FoodSpawner : Singleton<FoodSpawner>
         {
             DialogueHandler.Instance.AddDialogueEventToStack(dropFoodDialogues[3]);
         }
-        if (activeFood.Count == 300)
+        if (activeFood.Count == 250)
         {
             DialogueHandler.Instance.AddDialogueEventToStack(dropFoodDialogues[4]);
         }
-        if (activeFood.Count == 1000)
+        if (activeFood.Count == 500)
         {
             DialogueHandler.Instance.AddDialogueEventToStack(dropFoodDialogues[5]);
         }
-        if (activeFood.Count > 1100)
+        if (activeFood.Count > 550)
         {
             Application.Quit();
         }

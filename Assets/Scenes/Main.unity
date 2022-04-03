@@ -1066,6 +1066,7 @@ MonoBehaviour:
   dialogueEvents: []
   waitBeforeNext: 0
   activateWhenComplete: {fileID: 0}
+  finalDeathDialogue: {fileID: 11400000, guid: 310ffa4ed8784a84bb973b8b4959fdae, type: 2}
 --- !u!1001 &490167783
 PrefabInstance:
   m_ObjectHideFlags: 0

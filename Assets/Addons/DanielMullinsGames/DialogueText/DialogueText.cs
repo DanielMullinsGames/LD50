@@ -169,7 +169,7 @@ public class DialogueText : ManagedBehaviour
                     EndOfVisibleCharacters = true;
                 }
 
-                float adjustedFrequency = Mathf.Clamp(characterFrequency * 0.01f * DIALOGUE_SPEED, 0.01f, 0.2f);
+                float adjustedFrequency = Mathf.Clamp(characterFrequency * 0.01f * DIALOGUE_SPEED, 0.01f, 2f);
                 float waitTimer = 0f;
                 while (!skipToEnd && waitTimer < adjustedFrequency)
                 {

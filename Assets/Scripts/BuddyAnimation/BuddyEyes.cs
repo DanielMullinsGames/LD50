@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -19,6 +19,12 @@ public class BuddyEyes : TimedBehaviour
     public void SetEmotion(Emotion emotion)
     {
         currentEmotion = emotion;
+        UpdateSprite();
+    }
+
+    public void Close()
+    {
+        eyesClosed = true;
         UpdateSprite();
     }
 
