@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.IO;
 using Sirenix.OdinInspector;
+using System.Collections.Generic;
 
 public class DeathHandler : Singleton<DeathHandler>
 {
@@ -24,9 +25,18 @@ public class DeathHandler : Singleton<DeathHandler>
     [SerializeField]
     private DialogueEvent hatDialogue = default;
 
+    [SerializeField]
+    private List<UIButton> holidayHideUIButtons = default;
+
+    [SerializeField]
+    private GameObject holidayDeadScene = default;
+
     [Header("Debug")]
     [SerializeField]
     private bool debugDead = false;
+
+    [SerializeField]
+    private bool debugDeadHoliday = false;
 
     [SerializeField]
     private bool debugDontStartIntro = false;
@@ -36,11 +46,25 @@ public class DeathHandler : Singleton<DeathHandler>
 
     private void Start()
     {
+#if UNITY_EDITOR
+        if (debugDeadHoliday)
+        {
+            PlayerPrefs.SetInt("Holiday", 1);
+        }
+#endif
+
         if (DeathIsMarked())
         {
             Dead = true;
             deadBuddy.SetActive(true);
             aliveBuddy.SetActive(false);
+
+            if (PlayerPrefs.GetInt("Holiday") == 1)
+            {
+                holidayHideUIButtons.ForEach(x => x.SetHidden());
+                holidayDeadScene.SetActive(true);
+                AudioController.Instance.PlaySound2D("rowboat", 0.75f);
+            }
         }
         else
         {

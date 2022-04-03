@@ -50,6 +50,8 @@ public class RowboatSequencer : Sequencer
         yield return new WaitUntil(() => DialogueHandler.Instance.NoDialoguePlaying);
         yield return new WaitForSeconds(5f);
 
+        PlayerPrefs.SetInt("Holiday", 1);
+
         DialogueHandler.Instance.AddDialogueEventToStack(dialogueEvents[2]);
         yield return new WaitUntil(() => DialogueHandler.Instance.NoDialoguePlaying);
         yield return new WaitForSeconds(12f);
