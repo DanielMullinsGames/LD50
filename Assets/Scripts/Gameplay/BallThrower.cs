@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BallThrower : TimedBehaviour
 {
+    public static BallThrower instance;
+
     [SerializeField]
     private Animator throwerAnim = default;
 
@@ -12,6 +14,21 @@ public class BallThrower : TimedBehaviour
 
     [SerializeField]
     private Transform handTarget = default;
+
+    private void Start()
+    {
+        instance = this;
+    }
+
+    public void OnBallLanded()
+    {
+        
+    }
+
+    public void OnBallCaught()
+    {
+
+    }
 
     protected override void OnTimerReached()
     {

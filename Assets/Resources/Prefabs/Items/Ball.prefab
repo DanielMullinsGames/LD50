@@ -106,6 +106,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1609025994507488873}
+  - component: {fileID: 5886070204924818146}
   - component: {fileID: 1609025994507488871}
   - component: {fileID: 1609025994507488870}
   m_Layer: 0
@@ -132,6 +133,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5886070204924818146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609025994507488875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d80afe9d2cc9847a5b1c8e676dfed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  catchBallInteractable: {fileID: 2600206523584212558}
 --- !u!58 &1609025994507488871
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -178,6 +192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8294884343234766307}
+  - component: {fileID: 2600206523584212558}
   - component: {fileID: 2867011574969975634}
   m_Layer: 0
   m_Name: CatchInteractable
@@ -201,6 +216,19 @@ Transform:
   m_Father: {fileID: 1609025994507488873}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2600206523584212558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8462030535414967206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd0d498a3d603f43b04d25bc809b534, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortOrder: 2
 --- !u!58 &2867011574969975634
 CircleCollider2D:
   m_ObjectHideFlags: 0

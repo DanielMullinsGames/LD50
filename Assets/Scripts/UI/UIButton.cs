@@ -31,7 +31,7 @@ public class UIButton : Interactable2D
 
     public void SetHidden()
     {
-        buttonRenderer.transform.localPosition = new Vector2(mouseOverOffset.x * -10f, 0f);
+        buttonRenderer.transform.localPosition = new Vector2(mouseOverOffset.x * -11f, 0f);
         SetCollisionEnabled(false);
     }
 
