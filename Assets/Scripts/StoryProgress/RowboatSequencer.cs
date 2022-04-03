@@ -60,6 +60,8 @@ public class RowboatSequencer : Sequencer
         yield return new WaitUntil(() => DialogueHandler.Instance.NoDialoguePlaying);
         yield return new WaitForSeconds(7.5f);
 
+        PlayerPrefs.SetInt("Holiday", 0);
+
         Destroy(rowboatAudio.gameObject);
         AudioController.Instance.PlaySound2D("button_press_chunk", 1f, pitch: new AudioParams.Pitch(AudioParams.Pitch.Variation.Small));
         rowboatScene.SetActive(false);
