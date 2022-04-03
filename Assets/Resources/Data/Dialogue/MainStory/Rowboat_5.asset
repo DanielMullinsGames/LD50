@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8457d4647e2ef3a408d1f106ee40b463, type: 3}
+  m_Name: Rowboat_5
+  m_EditorClassIdentifier: 
+  interruptBehaviour: 2
+  lines:
+  - '[e:Sad]Oh...[w:2]'
+  - '[e:Sad]That''s...[w:0.3] All there is...[w:2]'
+  - A free trial after all,[w:0.3] ha[w:0.3] ha.[w:0.3]
+  - '[e:Sad]I hope that if you pay[w:0.3]'
+  - '[e:Sad]for another BitBuddy...[w:1]'
+  - They appreciate you[w:0.4]
+  - as much as I do!

@@ -951,7 +951,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb8605ff72de9ba4ca3936da8334a205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueEvents: []
+  dialogueEvents:
+  - {fileID: 11400000, guid: 408508b52310e7d4794a81396eb1ed8a, type: 2}
+  - {fileID: 11400000, guid: 2915105cd1f74e949b28a930de205f0f, type: 2}
+  - {fileID: 11400000, guid: 1b8fd31b4fc7da248aa151c9448ea9d1, type: 2}
+  - {fileID: 11400000, guid: 4233d64069abd554abb7db00d578bb75, type: 2}
+  - {fileID: 11400000, guid: d4b207d387d626d4e8d724bf61fda30d, type: 2}
   waitBeforeNext: 0
   activateWhenComplete: {fileID: 0}
   holidayButton: {fileID: 417360423}
@@ -2775,6 +2780,10 @@ PrefabInstance:
     - target: {fileID: 3294151812890714325, guid: 8cfea06934595664097b5e0a2ab19331, type: 3}
       propertyPath: m_Name
       value: CatchBallThrower
+      objectReference: {fileID: 0}
+    - target: {fileID: 3294151812890714325, guid: 8cfea06934595664097b5e0a2ab19331, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3294151812890714330, guid: 8cfea06934595664097b5e0a2ab19331, type: 3}
       propertyPath: m_RootOrder
