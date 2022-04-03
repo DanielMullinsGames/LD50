@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8457d4647e2ef3a408d1f106ee40b463, type: 3}
   m_Name: QuitButton_3
   m_EditorClassIdentifier: 
-  interruptBehaviour: 2
+  interruptBehaviour: 0
   lines:
   - '[e:Shocked][t:4]MURDERER![w:0.5]'
   - '[e:Shocked][t:4]YOU''LL BE A MURDERER![w:0.5]'
