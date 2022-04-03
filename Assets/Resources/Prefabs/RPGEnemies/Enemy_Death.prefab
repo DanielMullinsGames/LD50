@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8510729366860973953
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8392387172014428756, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}
+      propertyPath: health
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392387172014428756, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}
+      propertyPath: expReward
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392387172014428756, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}
+      propertyPath: maxHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392387172014428756, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}
+      propertyPath: critChance
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392387172014428756, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}
+      propertyPath: attackPower
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392387172014428756, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}
+      propertyPath: critMultiplier
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392387172014428757, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392387172014428757, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392387172014428757, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392387172014428757, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392387172014428758, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}
+      propertyPath: m_Name
+      value: Enemy_Death
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392387173222265059, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2f501c21ba0b46f43a2533b00554df19, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}

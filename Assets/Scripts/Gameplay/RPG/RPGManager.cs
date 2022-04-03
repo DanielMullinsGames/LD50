@@ -38,6 +38,9 @@ public class RPGManager : Singleton<RPGManager>
     private List<GameObject> enemyPrefabsT3 = default;
 
     [SerializeField]
+    private List<GameObject> enemyPrefabsT4 = default;
+
+    [SerializeField]
     private GameObject damageSplashPrefab = default;
 
     [SerializeField]
@@ -164,6 +167,10 @@ public class RPGManager : Singleton<RPGManager>
         if (GameStatus.buddyLevel >= 10)
         {
             enemyList = enemyPrefabsT3;
+        }
+        if (GameStatus.buddyLevel >= 20)
+        {
+            enemyList = enemyPrefabsT4;
         }
 
         var obj = Instantiate(enemyList[Random.Range(0, enemyList.Count)]);

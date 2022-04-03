@@ -229,6 +229,8 @@ MonoBehaviour:
   - {fileID: 174392368874444247, guid: e988d5fd6862d5f478c7e8829c5a1d2b, type: 3}
   - {fileID: 174392368874444247, guid: 9e245ff55e871744d8e191b98199872f, type: 3}
   - {fileID: 174392368874444247, guid: 7179209c7bb83434db20451bf64d5dd7, type: 3}
+  enemyPrefabsT4:
+  - {fileID: 174392368874444247, guid: 801564d383a757d419338948952b38a0, type: 3}
   damageSplashPrefab: {fileID: 5272047035397510825, guid: f3a31a8a03f676a47a7f53251f09e177, type: 3}
   levelUpEvents:
   - {fileID: 11400000, guid: 023c336a7df3b544eb2c74fc2ac5c545, type: 2}
