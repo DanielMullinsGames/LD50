@@ -57,6 +57,7 @@ MonoBehaviour:
   - {fileID: 8392387172014428758, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}
   enemyPrefabsT3:
   - {fileID: 8392387172014428758, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}
+  damageSplashPrefab: {fileID: 5272047035397510825, guid: f3a31a8a03f676a47a7f53251f09e177, type: 3}
 --- !u!114 &2178845616544594622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,11 +281,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6738841716622713151, guid: 7278fac62fa96714993c314bdcd927c1, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -22.222912
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6738841716622713151, guid: 7278fac62fa96714993c314bdcd927c1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -7.154897
+      value: 0.32999998
       objectReference: {fileID: 0}
     - target: {fileID: 6738841716622713151, guid: 7278fac62fa96714993c314bdcd927c1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

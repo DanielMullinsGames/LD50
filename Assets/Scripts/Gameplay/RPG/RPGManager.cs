@@ -25,6 +25,9 @@ public class RPGManager : Singleton<RPGManager>
     [SerializeField]
     private List<GameObject> enemyPrefabsT3 = default;
 
+    [SerializeField]
+    private GameObject damageSplashPrefab = default;
+
     private int playerExp;
     private AudioSource rpgMusic;
 
@@ -39,7 +42,7 @@ public class RPGManager : Singleton<RPGManager>
     {
         while (player.Alive)
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.6f);
 
             var enemy = InstantiateEnemy();
             yield return new WaitForSeconds(0.5f);
@@ -48,9 +51,12 @@ public class RPGManager : Singleton<RPGManager>
 
             if (player.Alive)
             {
+                yield return new WaitForSeconds(0.1f);
                 playerExp += enemy.expReward;
                 Destroy(enemy.gameObject);
-                
+                AudioController.Instance.PlaySound2D("enemy_die", 0.7f);
+                ScreenEffectsController.Instance.AddThenSubtractIntensity(ScreenEffect.RenderCanvasShake, 0.05f, 0.05f, 0.05f, 0.1f);
+
                 int expToNextLevel = Mathf.RoundToInt(Mathf.Pow(GameStatus.buddyLevel * 10f, 1.1f));
                 expBar.ShowAmount(playerExp / (float)expToNextLevel);
                 yield return new WaitForSeconds(0.5f);
@@ -121,15 +127,32 @@ public class RPGManager : Singleton<RPGManager>
         yield return attacker.PlayAttackAnim();
         defender.TakeHitAnim();
 
+        bool crit = false;
         int damage = attacker.attackPower;
         if (Random.value < attacker.critChance)
         {
             damage *= attacker.critMultiplier;
-            //SHOW CRIT
+            crit = true;
+            AudioController.Instance.PlaySound2D("rpg_crit", 0.5f);
         }
         defender.health -= damage;
         defender.UpdateHealthBar();
 
-        //SHOW DAMAGE NUMBERS
+        if (defender is RPGEnemy)
+        {
+            SpawnDamageSplash(damage, crit, defender.transform.position + Vector3.up * 0.3f);
+        }
+        else
+        {
+            SpawnDamageSplash(damage, crit, Vector3.up * 0.2f);
+        }
+    }
+
+    private void SpawnDamageSplash(int damage, bool crit, Vector2 pos)
+    {
+        var obj = Instantiate(damageSplashPrefab);
+        obj.transform.position = pos;
+        obj.GetComponent<DamageSplash>().UpdateDisplay(damage, crit);
+        Destroy(obj, 0.5f);
     }
 }

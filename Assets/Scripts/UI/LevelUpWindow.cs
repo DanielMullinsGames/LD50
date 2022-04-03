@@ -101,6 +101,6 @@ public class LevelUpWindow : MonoBehaviour
         }
 
         window.SetActive(false);
-        AudioController.Instance.PlaySound2D("promo_success", 0.5f);
+        AudioController.Instance.PlaySound2D("rpg_levelup", 0.5f);
     }
 }
