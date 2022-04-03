@@ -353,6 +353,7 @@ Transform:
   m_Children:
   - {fileID: 1107293460}
   - {fileID: 303832052}
+  - {fileID: 1292293265}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -518,7 +519,7 @@ MonoBehaviour:
   dialogueEvents:
   - {fileID: 11400000, guid: 6098e67eb86000042882f34b38ddba01, type: 2}
   waitBeforeNext: 0
-  activateWhenComplete: {fileID: 0}
+  activateWhenComplete: {fileID: 1292293264}
 --- !u!114 &319242612 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9121529763969385555, guid: f1c03c4d72dee164f9a6c67ac050ba09, type: 3}
@@ -1660,6 +1661,54 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6738841716622713151, guid: 7278fac62fa96714993c314bdcd927c1, type: 3}
   m_PrefabInstance: {fileID: 1236879183}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1292293264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1292293265}
+  - component: {fileID: 1292293266}
+  m_Layer: 0
+  m_Name: Part2Sequencer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1292293265
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292293264}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 147889209}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1292293266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292293264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d11abcf970e9fdb438cb9b5caad4f97d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueEvents:
+  - {fileID: 11400000, guid: fd9bbdb96a1f21743ad3b9c5d6438e8c, type: 2}
+  waitBeforeNext: 0
+  activateWhenComplete: {fileID: 0}
 --- !u!1001 &1332840856
 PrefabInstance:
   m_ObjectHideFlags: 0
