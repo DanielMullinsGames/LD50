@@ -47,7 +47,7 @@ public class PromoCodeWindow : ManagedBehaviour
         }
         else if (input.ToLower() == "lionel.exe")
         {
-            PlaySuccessSound();
+            AudioController.Instance.PlaySound2D("broken_hum");
         }
         else if (input.ToLower() == "ponies")
         {
