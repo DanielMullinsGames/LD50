@@ -70,7 +70,7 @@ public class RPGManager : Singleton<RPGManager>
                 AudioController.Instance.PlaySound2D("enemy_die", 0.7f);
                 ScreenEffectsController.Instance.AddThenSubtractIntensity(ScreenEffect.RenderCanvasShake, 0.05f, 0.05f, 0.05f, 0.1f);
 
-                int expToNextLevel = Mathf.RoundToInt(Mathf.Pow(GameStatus.buddyLevel * 10f, 1.05f));
+                int expToNextLevel = Mathf.RoundToInt(Mathf.Pow(GameStatus.buddyLevel * 10f, 1.035f));
                 expBar.ShowAmount(playerExp / (float)expToNextLevel);
                 yield return new WaitForSeconds(0.5f);
 
@@ -108,11 +108,11 @@ public class RPGManager : Singleton<RPGManager>
     private RPGEnemy InstantiateEnemy()
     {
         var enemyList = enemyPrefabsT1;
-        if (GameStatus.buddyLevel > 5)
+        if (GameStatus.buddyLevel >= 4)
         {
             enemyList = enemyPrefabsT2;
         }
-        if (GameStatus.buddyLevel > 15)
+        if (GameStatus.buddyLevel >= 10)
         {
             enemyList = enemyPrefabsT3;
         }
