@@ -10,12 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8457d4647e2ef3a408d1f106ee40b463, type: 3}
-  m_Name: Final_Death
+  m_Name: LongTerm_3
   m_EditorClassIdentifier: 
   interruptBehaviour: 2
   lines:
-  - '[t:25]I think this is it.[w:1]'
-  - '[t:50]I feel it.[w:1]'
-  - '[e:Sad][t:75]I will...[w:1]'
-  - '[e:Sad][t:75]Never forget...[w:1]'
-  - '[t:150]Our holiday...[w:1]'
+  - I wish we could play another game.[w:0.3]
+  - Even balls would be fun...[w:0.3]

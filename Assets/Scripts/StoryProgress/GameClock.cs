@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameClock : Singleton<GameClock>
 {
     public float NormalizedTimer => Timer / MAX_TIME;
-    public int Hours => Mathf.RoundToInt(Minutes / 60f);
+    public int Hours => Mathf.FloorToInt(Minutes / 60f);
     public int Minutes => Mathf.RoundToInt(Timer / 60f);
     public float Timer { get; private set; }
 

@@ -23,6 +23,9 @@ public class BuddyAger : Singleton<BuddyAger>
     [SerializeField]
     private Transform head = default;
 
+    [SerializeField]
+    private List<SineWaveMovement> movers = default;
+
     public void Die()
     {
         eyes.SetEmotion(Emotion.Neutral);
@@ -40,6 +43,7 @@ public class BuddyAger : Singleton<BuddyAger>
     public override void ManagedUpdate()
     {
         coloredRenderers.ForEach(x => x.color = GetColor());
+        movers.ForEach(x => x.Modifier = 1f - (GameClock.Instance.NormalizedTimer * 0.75f));
     }
 
     private Color GetColor()

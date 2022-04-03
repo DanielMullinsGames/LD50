@@ -10,12 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8457d4647e2ef3a408d1f106ee40b463, type: 3}
-  m_Name: Final_Death
+  m_Name: LongTerm_4
   m_EditorClassIdentifier: 
   interruptBehaviour: 2
   lines:
-  - '[t:25]I think this is it.[w:1]'
-  - '[t:50]I feel it.[w:1]'
-  - '[e:Sad][t:75]I will...[w:1]'
-  - '[e:Sad][t:75]Never forget...[w:1]'
-  - '[t:150]Our holiday...[w:1]'
+  - 20 more hours![w:0.3]
+  - Until the HOLIDAY code resets![w:0.3]
+  - I'm sure of it![w:0.3]

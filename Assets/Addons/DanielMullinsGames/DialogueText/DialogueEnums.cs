@@ -5,7 +5,7 @@ public enum Emotion
     Neutral,
     Shocked,
     Sad,
-    Happy,
+    Sleeping,
     Angry,
     NUM_EMOTIONS,
 }

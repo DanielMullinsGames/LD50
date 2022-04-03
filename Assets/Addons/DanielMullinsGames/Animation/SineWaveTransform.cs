@@ -2,6 +2,8 @@
 
 public abstract class SineWaveTransform : ManagedBehaviour
 {
+    public float Modifier = 1f;
+
     public Vector3 magnitude = default;
     public float speed = default;
     public float timeOffset = default;
@@ -16,9 +18,9 @@ public abstract class SineWaveTransform : ManagedBehaviour
     public override void ManagedUpdate()
     {
         float sine = (Mathf.Sin(Time.time * speed + timeOffset) * 0.5f) + 0.5f;
-        float x = originalMagnitude.x + (sine * magnitude.x);
-        float y = originalMagnitude.y + (sine * magnitude.y);
-        float z = originalMagnitude.z + (sine * magnitude.z);
+        float x = originalMagnitude.x + (sine * magnitude.x * Modifier);
+        float y = originalMagnitude.y + (sine * magnitude.y * Modifier);
+        float z = originalMagnitude.z + (sine * magnitude.z * Modifier);
         ApplyTransformation(new Vector3(x, y, z));
     }
 

@@ -340,6 +340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d436f9bc83f54cf4cb609a21b4dee335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Modifier: 1
   magnitude: {x: 0, y: 0.04, z: 0}
   speed: 2.5
   timeOffset: 0.05
@@ -471,6 +472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d436f9bc83f54cf4cb609a21b4dee335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Modifier: 1
   magnitude: {x: 0, y: 0.05, z: 0}
   speed: 2.5
   timeOffset: 0
@@ -588,6 +590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d436f9bc83f54cf4cb609a21b4dee335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Modifier: 1
   magnitude: {x: 0, y: 0.06, z: 0}
   speed: 2.5
   timeOffset: 0.1
@@ -640,10 +643,12 @@ MonoBehaviour:
   - {fileID: 277388947, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
   - {fileID: -1046800549, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
   - {fileID: -1046800549, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
+  - {fileID: 1138124232, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
   closedSprites:
   - {fileID: 1138124232, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
   - {fileID: 1917630877, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
   - {fileID: 1917630877, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
+  - {fileID: 1138124232, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
 --- !u!212 &7372914427532887074
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -813,6 +818,11 @@ MonoBehaviour:
   - {fileID: 7372914426873021224}
   body: {fileID: 7372914427196926958}
   head: {fileID: 7372914427244547639}
+  movers:
+  - {fileID: 7372914427244547636}
+  - {fileID: 7372914426873021221}
+  - {fileID: 7372914428342025749}
+  - {fileID: 7372914427196926955}
 --- !u!1 &7372914427828542498
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,10 +973,12 @@ MonoBehaviour:
   - {fileID: -543645894, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
   - {fileID: 350843910, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
   - {fileID: 1862408961, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
+  - {fileID: 1081450933, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
   closedSprites:
   - {fileID: 1081450933, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
   - {fileID: 1802024055, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
   - {fileID: -2144673902, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
+  - {fileID: 1081450933, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
 --- !u!212 &7372914428237765057
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1130,6 +1142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d436f9bc83f54cf4cb609a21b4dee335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Modifier: 1
   magnitude: {x: 0, y: 0.04, z: 0}
   speed: 2.5
   timeOffset: 0.05

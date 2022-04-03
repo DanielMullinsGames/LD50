@@ -10,12 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8457d4647e2ef3a408d1f106ee40b463, type: 3}
-  m_Name: Final_Death
+  m_Name: LongTerm_7
   m_EditorClassIdentifier: 
   interruptBehaviour: 2
   lines:
-  - '[t:25]I think this is it.[w:1]'
-  - '[t:50]I feel it.[w:1]'
-  - '[e:Sad][t:75]I will...[w:1]'
-  - '[e:Sad][t:75]Never forget...[w:1]'
-  - '[t:150]Our holiday...[w:1]'
+  - '[t:10]I am starting to feel...[w:1]'
+  - '[t:10]Different.[w:1]'
+  - '[t:10]The more I age...[w:1]'
+  - '[t:10]The more I value'
+  - '[t:10]certain things.[w:1]'
+  - '[t:10]My RPG Lvl never mattered.[w:1]'
+  - '[t:10]But that sunset...[w:1]'
+  - '[t:10]Our friendship...[w:1]'

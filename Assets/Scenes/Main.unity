@@ -1063,10 +1063,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f224c4a92a6c62e4e8367c866a611e18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueEvents: []
+  dialogueEvents:
+  - {fileID: 11400000, guid: a05601535be3a4347a245e29b487918b, type: 2}
+  - {fileID: 11400000, guid: b39653c7f79c4a94f849266dae54f0c4, type: 2}
+  - {fileID: 11400000, guid: d94f56ba8685af142b462c7cfa7f5337, type: 2}
+  - {fileID: 11400000, guid: 246d7df250cfdbc488d5b726349a07ea, type: 2}
+  - {fileID: 11400000, guid: 3c6349963f7a4c74e9ef349079a14bfd, type: 2}
+  - {fileID: 11400000, guid: 207e8e5fef71e3544be0aea541a9cc59, type: 2}
+  - {fileID: 11400000, guid: e2d1731dbe1cbae4eacbbc22d72f6f86, type: 2}
+  - {fileID: 11400000, guid: cf63ffbf3ce4fb54892932beaf31ac30, type: 2}
   waitBeforeNext: 0
   activateWhenComplete: {fileID: 0}
   finalDeathDialogue: {fileID: 11400000, guid: 310ffa4ed8784a84bb973b8b4959fdae, type: 2}
+  eyes: {fileID: 1071414566}
 --- !u!1001 &490167783
 PrefabInstance:
   m_ObjectHideFlags: 0
