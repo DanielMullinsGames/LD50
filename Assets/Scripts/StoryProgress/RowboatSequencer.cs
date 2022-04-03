@@ -24,6 +24,7 @@ public class RowboatSequencer : Sequencer
 
     protected override IEnumerator Sequence()
     {
+        GameStatus.canUseHolidayCode = false;
         holidayButton.Show();
 
         yield return new WaitUntil(() => buttonPressed);
