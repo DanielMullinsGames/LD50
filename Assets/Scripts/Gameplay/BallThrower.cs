@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BallThrower : TimedBehaviour
 {
@@ -15,6 +16,20 @@ public class BallThrower : TimedBehaviour
     [SerializeField]
     private Transform handTarget = default;
 
+    [SerializeField]
+    private Text ballsText = default;
+
+    [SerializeField]
+    private List<DialogueEvent> caughtEvents = default;
+
+    [SerializeField]
+    private List<DialogueEvent> droppedEvents = default;
+
+    public int BallsCaught { get; private set; }
+
+    private int droppedIndex = 0;
+    private bool playDroppedDialogue = false;
+
     private void Start()
     {
         instance = this;
@@ -22,12 +37,37 @@ public class BallThrower : TimedBehaviour
 
     public void OnBallLanded()
     {
-        
+        if (playDroppedDialogue && BallsCaught < 3)
+        {
+            if (droppedEvents.Count > droppedIndex)
+            {
+                DialogueHandler.Instance.AddDialogueEventToStack(droppedEvents[droppedIndex]);
+                droppedIndex++;
+            }
+        }
+        playDroppedDialogue = !playDroppedDialogue;
     }
 
     public void OnBallCaught()
     {
+        BallsCaught++;
+        ballsText.text = "Balls Caught: " + BallsCaught.ToString();
 
+        switch (BallsCaught)
+        {
+            case 1:
+                DialogueHandler.Instance.AddDialogueEventToStack(caughtEvents[0]);
+                break;
+            case 2:
+                DialogueHandler.Instance.AddDialogueEventToStack(caughtEvents[1]);
+                break;
+            case 5:
+                DialogueHandler.Instance.AddDialogueEventToStack(caughtEvents[2]);
+                break;
+            case 8:
+                DialogueHandler.Instance.AddDialogueEventToStack(caughtEvents[3]);
+                break;
+        }
     }
 
     protected override void OnTimerReached()

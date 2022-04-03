@@ -28,15 +28,16 @@ public class Part2Sequencer : Sequencer
         playGameButton.gameObject.SetActive(false);
 
         ballThrower.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        DialogueHandler.Instance.AddDialogueEventToStack(dialogueEvents[1]);
 
-        // WAIT FOR MINIGAME COMPLETION
-        yield return new WaitForSeconds(8f);
+        yield return new WaitUntil(() => ballThrower.BallsCaught >= 10);
 
         ballThrower.gameObject.SetActive(false);
         BuddyHandsController.Instance.ClearHandTargets();
 
         yield return new WaitForSeconds(1f);
-        DialogueHandler.Instance.AddDialogueEventToStack(dialogueEvents[1]);
+        DialogueHandler.Instance.AddDialogueEventToStack(dialogueEvents[2]);
         yield return new WaitUntil(() => DialogueHandler.Instance.NoDialoguePlaying);
 
         yield return new WaitUntil(() => FoodSpawner.Instance.NoFood);
