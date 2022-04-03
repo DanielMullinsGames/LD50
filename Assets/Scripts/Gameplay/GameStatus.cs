@@ -7,4 +7,5 @@ public class GameStatus
     public static bool pressedClearFoodButton;
     public static bool shrunkWindow;
     public static bool didHoliday;
+    public static int buddyLevel;
 }

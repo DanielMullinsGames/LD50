@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class RPGEnemy : RPGEntity
 {
-
+    public int expReward = 0;
 }

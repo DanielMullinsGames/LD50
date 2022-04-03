@@ -10,6 +10,7 @@ public class BarUI : ManagedBehaviour
     [SerializeField]
     private float barMaxScale = default;
 
+    private float currentAmount = 0f;
     private float intendedAmount = 0f;
 
     public void ShowAmount(float normalized, bool immediate = false)
@@ -17,13 +18,14 @@ public class BarUI : ManagedBehaviour
         intendedAmount = normalized;
         if (immediate)
         {
+            currentAmount = intendedAmount;
             bar.transform.localScale = new Vector2(barMaxScale * intendedAmount, bar.transform.localScale.y);
         }
     }
 
     public override void ManagedUpdate()
     {
-        float amount = Mathf.Lerp(bar.transform.localScale.x, intendedAmount, Time.deltaTime);
-        bar.transform.localScale = new Vector2(barMaxScale * amount, bar.transform.localScale.y);
+        currentAmount = Mathf.Lerp(currentAmount, intendedAmount, Time.deltaTime * 10f);
+        bar.transform.localScale = new Vector2(barMaxScale * currentAmount, bar.transform.localScale.y);
     }
 }

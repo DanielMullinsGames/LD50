@@ -15,6 +15,11 @@ public class RPGEntity : ManagedBehaviour
     public float critChance;
     public int critMultiplier = 2;
 
+    private void Start()
+    {
+        UpdateHealthBar(true);
+    }
+
     public IEnumerator PlayAttackAnim()
     {
         //anim
@@ -22,9 +27,9 @@ public class RPGEntity : ManagedBehaviour
 
     }
 
-    public void UpdateHealthBar()
+    public void UpdateHealthBar(bool immediate = false)
     {
-
+        healthBar.ShowAmount(health / (float)maxHealth, immediate);
     }
 
     public void TakeHitAnim()
