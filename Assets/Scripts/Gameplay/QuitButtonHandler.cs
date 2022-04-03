@@ -28,6 +28,7 @@ public class QuitButtonHandler : ManagedBehaviour
         if (DeathHandler.Instance.Dead || GameStatus.didHoliday)
         {
             Application.Quit();
+            return;
         }
 
         switch (evadeQuitProgress)

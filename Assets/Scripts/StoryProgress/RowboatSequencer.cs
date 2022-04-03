@@ -24,10 +24,10 @@ public class RowboatSequencer : Sequencer
 
     protected override IEnumerator Sequence()
     {
-        yield return new WaitForSeconds(0.5f);
         holidayButton.Show();
 
         yield return new WaitUntil(() => buttonPressed);
+        FoodSpawner.Instance.ClearFood();
 
         var rowboatAudio = AudioController.Instance.PlaySound2D("rowboat", 0.75f);
 
