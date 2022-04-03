@@ -28,9 +28,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1259638188533402783}
   m_Father: {fileID: 5547887821847627426}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5547887820645475589
 SpriteRenderer:
@@ -114,7 +115,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1259638188533402783}
   - {fileID: 5547887820645475588}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -170,7 +170,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 5547887821847627426}
+    m_TransformParent: {fileID: 5547887820645475588}
     m_Modifications:
     - target: {fileID: 6738841716622713136, guid: 7278fac62fa96714993c314bdcd927c1, type: 3}
       propertyPath: m_Name

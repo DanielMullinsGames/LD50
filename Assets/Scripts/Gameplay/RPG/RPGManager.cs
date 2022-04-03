@@ -5,8 +5,16 @@ using Pixelplacement;
 
 public class RPGManager : Singleton<RPGManager>
 {
+    public bool GameOver => !player.Alive;
+
+    [SerializeField]
+    private LevelUpWindow levelUpWindow = default;
+
     [SerializeField]
     private RPGEntity player = default;
+
+    [SerializeField]
+    private BarUI expBar = default;
 
     [SerializeField]
     private List<GameObject> enemyPrefabsT1 = default;
@@ -17,8 +25,13 @@ public class RPGManager : Singleton<RPGManager>
     [SerializeField]
     private List<GameObject> enemyPrefabsT3 = default;
 
+    private int playerExp;
+    private AudioSource rpgMusic;
+
     private void Start()
     {
+        rpgMusic = AudioController.Instance.PlaySound2D("rpg_track", 0.7f, 0f);
+        rpgMusic.loop = true;
         StartCoroutine(GameLoop());
     }
 
@@ -35,14 +48,33 @@ public class RPGManager : Singleton<RPGManager>
 
             if (player.Alive)
             {
-                // IF PLAYER WINS, EXP + LEVEL UP
+                playerExp += enemy.expReward;
                 Destroy(enemy.gameObject);
+                
+                int expToNextLevel = Mathf.RoundToInt(Mathf.Pow(GameStatus.buddyLevel * 10f, 1.1f));
+                expBar.ShowAmount(playerExp / (float)expToNextLevel);
+                yield return new WaitForSeconds(0.5f);
+
+                if (playerExp > expToNextLevel)
+                {
+                    yield return LevelUp();
+                }
             }
             else
             {
                 // ELSE EXIT RPG
             }
         }
+    }
+
+    private IEnumerator LevelUp()
+    {
+        playerExp = 0;
+        GameStatus.buddyLevel++;
+        expBar.ShowAmount(0f, true);
+
+        levelUpWindow.ShowLevelUp();
+        yield return new WaitWhile(() => levelUpWindow.Choosing);
     }
 
     private RPGEnemy InstantiateEnemy()

@@ -48,9 +48,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57cf55cf2b2d55d409fbbe972783ec16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelUpWindow: {fileID: 2405662585163543254}
   player: {fileID: 2178845616544594622}
+  expBar: {fileID: 6056142517589580657}
   enemyPrefabsT1:
-  - {fileID: 8392387172014428758, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}
+  - {fileID: 174392368874444247, guid: d21a25d17d8dddb4f82c57e4f4f02b01, type: 3}
   enemyPrefabsT2:
   - {fileID: 8392387172014428758, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}
   enemyPrefabsT3:
@@ -71,7 +73,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   maxHealth: 35
   health: 35
-  attackPower: 2
+  attackPower: 3
   critChance: 0.1
   critMultiplier: 2
 --- !u!1 &2178845617202879143
@@ -177,6 +179,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4423d923e57adb45a7a3abaaf55f566, type: 3}
+--- !u!114 &6056142517589580657 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5347862943794898834, guid: d4423d923e57adb45a7a3abaaf55f566, type: 3}
+  m_PrefabInstance: {fileID: 2178845615399615715}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0037c06a3ea07fd408b8dca514129bf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7019250506580544529 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9175437377428615410, guid: d4423d923e57adb45a7a3abaaf55f566, type: 3}
@@ -323,6 +336,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2178845616544594623}
     m_Modifications:
+    - target: {fileID: 182202735481472189, guid: 95995ffca20dfc044b7bd05423a30906, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2178845616544594622}
     - target: {fileID: 4456630170679008164, guid: 95995ffca20dfc044b7bd05423a30906, type: 3}
       propertyPath: m_Name
       value: LevelUpWindow
@@ -378,6 +395,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4456630170679008165, guid: 95995ffca20dfc044b7bd05423a30906, type: 3}
   m_PrefabInstance: {fileID: 2586738595698357867}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2405662585163543254 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 182202735481472189, guid: 95995ffca20dfc044b7bd05423a30906, type: 3}
+  m_PrefabInstance: {fileID: 2586738595698357867}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e68c7b68500dd2643a256b11f9237e25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7019250505972276995
 PrefabInstance:
   m_ObjectHideFlags: 0
