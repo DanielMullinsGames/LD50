@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interruptBehaviour: 2
   lines:
-  - OK I know that wasn't...[w:0.3]
+  - OK I know the balls weren't...[w:0.3]
   - '[e:Sad]Like...[w:0.3]'
   - THAT fun.[w:1]
   - But this free trial[w:0.2]
