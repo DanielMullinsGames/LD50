@@ -26,6 +26,7 @@ public class BarUI : ManagedBehaviour
     public override void ManagedUpdate()
     {
         currentAmount = Mathf.Lerp(currentAmount, intendedAmount, Time.deltaTime * 10f);
+        currentAmount = Mathf.Clamp(currentAmount, 0f, 1f);
         bar.transform.localScale = new Vector2(barMaxScale * currentAmount, bar.transform.localScale.y);
     }
 }

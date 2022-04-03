@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 4485816848523647981}
+  anim: {fileID: 5278569033088025778}
   maxHealth: 10
   health: 10
   attackPower: 2
@@ -63,6 +64,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8392387173222265060}
   - component: {fileID: 8392387173222265059}
+  - component: {fileID: 5278569033088025778}
   m_Layer: 6
   m_Name: Anim
   m_TagString: Untagged
@@ -137,6 +139,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &5278569033088025778
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8392387173222265061}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 511ed50a9cdd76242b3e1eb1b1031232, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &8392387172994940031
 PrefabInstance:
   m_ObjectHideFlags: 0

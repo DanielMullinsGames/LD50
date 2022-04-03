@@ -7,6 +7,9 @@ public class RPGEntity : ManagedBehaviour
     [SerializeField]
     private BarUI healthBar = default;
 
+    [SerializeField]
+    private Animator anim = default;
+
     public bool Alive => health > 0;
 
     public int maxHealth;
@@ -22,8 +25,11 @@ public class RPGEntity : ManagedBehaviour
 
     public IEnumerator PlayAttackAnim()
     {
-        //anim
-        yield return new WaitForSeconds(0.1f);
+        if (anim != null)
+        {
+            anim.Play("attack", 0, 0f);
+        }
+        yield return new WaitForSeconds(0.25f);
 
     }
 
@@ -34,6 +40,11 @@ public class RPGEntity : ManagedBehaviour
 
     public void TakeHitAnim()
     {
+        if (anim != null)
+        {
+            anim.Play("hit", 0, 0f);
+        }
+
         ScreenEffectsController.Instance.AddThenSubtractIntensity(ScreenEffect.RenderCanvasShake, 0.05f, 0.05f, 0.05f, 0.1f);
         AudioController.Instance.PlaySound2D("button_press_chunk", 1f, pitch: new AudioParams.Pitch(AudioParams.Pitch.Variation.Small));
     }

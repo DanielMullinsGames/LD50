@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interruptBehaviour: 0
   lines:
-  - Keep the cursor in![w:0.3]
-  - If you click the X I die![w:0.3]
+  - '[e:Shocked]Keep the cursor in![w:0.3]'
+  - '[e:Shocked]If you click the X I die![w:0.3]'
