@@ -38,14 +38,16 @@ public class UIButton : Interactable2D
     public void Show()
     {
         Tween.LocalPosition(buttonRenderer.transform, Vector2.zero, 0.15f, 0f, Tween.EaseIn);
-        AudioController.Instance.PlaySound2D("button_mouseover", 0.5f, pitch: new AudioParams.Pitch(AudioParams.Pitch.Variation.Small));
+        AudioController.Instance.PlaySound2D("button_mouseover", 0.5f, pitch: new AudioParams.Pitch(AudioParams.Pitch.Variation.Small), 
+            repetition: new AudioParams.Repetition(0.02f));
         SetCollisionEnabled(true);
     }
 
     protected override void OnCursorEnter()
     {
         Tween.LocalPosition(buttonRenderer.transform, mouseOverOffset, 0.1f, 0f, Tween.EaseOut);
-        AudioController.Instance.PlaySound2D("button_mouseover", 0.5f, pitch: new AudioParams.Pitch(AudioParams.Pitch.Variation.Small));
+        AudioController.Instance.PlaySound2D("button_mouseover", 0.5f, pitch: new AudioParams.Pitch(AudioParams.Pitch.Variation.Small),
+            repetition: new AudioParams.Repetition(0.02f));
     }
 
     protected override void OnCursorExit()

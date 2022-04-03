@@ -65,6 +65,7 @@ public class FoodSpawner : ManagedBehaviour
 
     public void ClearFood()
     {
+        GameStatus.pressedClearFoodButton = true;
         activeFood.ForEach(x => Destroy(x));
         DialogueHandler.Instance.AddDialogueEventToStack(clearedFoodEvent);
     }

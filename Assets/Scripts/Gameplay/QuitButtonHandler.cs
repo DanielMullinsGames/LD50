@@ -25,7 +25,7 @@ public class QuitButtonHandler : ManagedBehaviour
 
     public void OnQuitPressed()
     {
-        if (DeathHandler.Instance.Dead)
+        if (DeathHandler.Instance.Dead || GameStatus.didHoliday)
         {
             Application.Quit();
         }
@@ -53,6 +53,7 @@ public class QuitButtonHandler : ManagedBehaviour
             case 2:
                 quitButton.SetCollisionEnabled(false);
                 Screen.SetResolution(300, 160, false);
+                GameStatus.shrunkWindow = true;
                 CustomCoroutine.WaitThenExecute(0.1f, () =>
                 {
                     DialogueHandler.Instance.AddDialogueEventToStack(dialogueEvents[2]);
@@ -61,6 +62,7 @@ public class QuitButtonHandler : ManagedBehaviour
                     CustomCoroutine.WaitOnConditionThenExecute(() => MousePosChecker.MouseOverGameWindow, () =>
                     {
                         Screen.SetResolution(900, 480, false);
+                        GameStatus.shrunkWindow = false;
                         DialogueHandler.Instance.AddDialogueEventToStack(dialogueEvents[3]);
                     });
                 });

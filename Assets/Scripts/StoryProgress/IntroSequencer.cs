@@ -23,10 +23,12 @@ public class IntroSequencer : Sequencer
             button.Show();
             yield return new WaitForSeconds(0.1f);
         }
+
+        yield return new WaitUntil(() => GameStatus.pressedClearFoodButton);
     }
 
     private bool CanProceed()
     {
-        return DialogueHandler.Instance.NoDialoguePlaying && Screen.currentResolution.width > 500; //HACK: don't proceed while screen shrunk
+        return DialogueHandler.Instance.NoDialoguePlaying && !GameStatus.shrunkWindow;
     }
 }

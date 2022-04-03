@@ -241,6 +241,7 @@ GameObject:
   - component: {fileID: 7372914426873021223}
   - component: {fileID: 7372914426873021222}
   - component: {fileID: 7372914426873021221}
+  - component: {fileID: 3338295378067454691}
   m_Layer: 6
   m_Name: Hand_R
   m_TagString: Untagged
@@ -342,6 +343,24 @@ MonoBehaviour:
   magnitude: {x: 0, y: 0.04, z: 0}
   speed: 2.5
   timeOffset: 0.05
+--- !u!114 &3338295378067454691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7372914426873021225}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c737d25ae88af46a544865129a5ce9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  offset: {x: 0, y: 0, z: 0}
+  x: 1
+  y: 1
+  z: 0
+  destroyIfTargetNull: 0
 --- !u!1 &7372914427196926959
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,6 +706,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7372914427805977220}
   - component: {fileID: 2189817687206492851}
+  - component: {fileID: 1559945057379614187}
   m_Layer: 6
   m_Name: Buddy
   m_TagString: Untagged
@@ -744,6 +764,22 @@ MonoBehaviour:
   - {r: 0.45882356, g: 0.7568628, b: 0.7725491, a: 1}
   - {r: 0.16862746, g: 0.7372549, b: 0.3529412, a: 1}
   - {r: 0.27058825, g: 0.73333335, b: 0.6313726, a: 1}
+--- !u!114 &1559945057379614187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7372914427805977221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8d5f99c8847cbf4c8460be6558031e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftHandIdleMovement: {fileID: 7372914428342025749}
+  rightHandIdleMovement: {fileID: 7372914426873021221}
+  leftHandMatchPos: {fileID: 5332595354345203941}
+  rightHandMatchPos: {fileID: 3338295378067454691}
 --- !u!1 &7372914427828542498
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,6 +998,7 @@ GameObject:
   - component: {fileID: 7372914428342025751}
   - component: {fileID: 7372914428342025750}
   - component: {fileID: 7372914428342025749}
+  - component: {fileID: 5332595354345203941}
   m_Layer: 6
   m_Name: Hand_L
   m_TagString: Untagged
@@ -1063,6 +1100,24 @@ MonoBehaviour:
   magnitude: {x: 0, y: 0.04, z: 0}
   speed: 2.5
   timeOffset: 0.05
+--- !u!114 &5332595354345203941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7372914428342025753}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c737d25ae88af46a544865129a5ce9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  offset: {x: 0, y: 0, z: 0}
+  x: 1
+  y: 1
+  z: 0
+  destroyIfTargetNull: 0
 --- !u!1 &7372914428433424660
 GameObject:
   m_ObjectHideFlags: 0
