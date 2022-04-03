@@ -194,6 +194,7 @@ GameObject:
   - component: {fileID: 8294884343234766307}
   - component: {fileID: 2600206523584212558}
   - component: {fileID: 2867011574969975634}
+  - component: {fileID: 8710742225410541249}
   m_Layer: 0
   m_Name: CatchInteractable
   m_TagString: Untagged
@@ -229,6 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sortOrder: 2
+  ball: {fileID: 5886070204924818146}
 --- !u!58 &2867011574969975634
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -244,4 +246,22 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.15
+  m_Radius: 0.1
+--- !u!114 &8710742225410541249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8462030535414967206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c737d25ae88af46a544865129a5ce9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1609025994507488873}
+  offset: {x: 0, y: 0, z: 0}
+  x: 1
+  y: 1
+  z: 1
+  destroyIfTargetNull: 1

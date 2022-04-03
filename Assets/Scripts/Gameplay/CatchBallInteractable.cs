@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class CatchBallInteractable : Interactable2D
 {
+    [SerializeField]
+    private Ball ball = default;
+
+    private void Start()
+    {
+        transform.parent = null;
+    }
+
     protected override void OnCursorSelectStart()
     {
         AudioController.Instance.PlaySound2D("ball_caught");
-        Destroy(transform.parent.gameObject);
+        Destroy(ball.gameObject);
+        Destroy(gameObject);
         BallThrower.instance.OnBallCaught();
     }
 }
