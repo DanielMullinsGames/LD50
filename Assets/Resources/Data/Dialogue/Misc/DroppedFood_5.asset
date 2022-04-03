@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interruptBehaviour: 0
   lines:
-  - This is reckless.[w:0.3]
+  - '[e:Shocked]This is reckless.[w:0.3]'
   - I don't even want this food.[w:0.3]
   - It has no nourishment.[w:0.3]

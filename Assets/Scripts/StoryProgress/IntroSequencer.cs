@@ -17,11 +17,16 @@ public class IntroSequencer : Sequencer
         DeathHandler.Instance.MarkAsDead();
 
         DialogueHandler.Instance.AddDialogueEventToStack(dialogueEvents[1]);
-        yield return new WaitUntil(() => DialogueHandler.Instance.NoDialoguePlaying);
+        yield return new WaitUntil(() => CanProceed());
         foreach (var button in initialButtons)
         {
             button.Show();
             yield return new WaitForSeconds(0.1f);
         }
+    }
+
+    private bool CanProceed()
+    {
+        return DialogueHandler.Instance.NoDialoguePlaying && Screen.currentResolution.width > 500; //HACK: don't proceed while screen shrunk
     }
 }

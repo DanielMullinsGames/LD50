@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8457d4647e2ef3a408d1f106ee40b463, type: 3}
   m_Name: QuitButton_1
   m_EditorClassIdentifier: 
-  interruptBehaviour: 0
+  interruptBehaviour: 2
   lines:
   - '[e:Shocked][t:4]HEY![w:0.5]'
   - '[e:Shocked][t:4]WH-[w:0.2]'

@@ -25,7 +25,7 @@ public class MousePosChecker : ManagedBehaviour
         {
             secondsMouseOutOfWindow += Time.deltaTime;
 
-            if (secondsMouseOutOfWindow > 1f + (dialogueEventIndex * 0.25f))
+            if (secondsMouseOutOfWindow > 3f + (dialogueEventIndex * 2f))
             {
                 if (dialogueEventIndex < dialogueEvents.Count && !playedDialogueOutOfWindow)
                 {

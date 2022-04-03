@@ -481,6 +481,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: buddy_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 89
+        width: 32
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da37a15c2b61b4c47b0642899eb63d96
+      internalID: 1862408961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buddy_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 89
+        width: 32
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92078c382bfaadd48aa9cad25aa2dc2d
+      internalID: -2144673902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -498,6 +540,7 @@ TextureImporter:
       buddy_sheet_13: -1908552352
       buddy_sheet_2: 1138124232
       buddy_sheet_8: -1692842252
+      buddy_sheet_18: 1862408961
       buddy_sheet_0: -543645894
       buddy_sheet_14: 350843910
       buddy_sheet_9: 802142134
@@ -509,6 +552,7 @@ TextureImporter:
       buddy_sheet_16: 1917630877
       buddy_sheet_3: 277388947
       buddy_sheet_10: 2108487374
+      buddy_sheet_19: -2144673902
       buddy_sheet_17: -1046800549
   spritePackingTag: 
   pSDRemoveMatte: 0

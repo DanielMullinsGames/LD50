@@ -620,8 +620,10 @@ MonoBehaviour:
   openSprites:
   - {fileID: 277388947, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
   - {fileID: -1046800549, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
+  - {fileID: -1046800549, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
   closedSprites:
   - {fileID: 1138124232, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
+  - {fileID: 1917630877, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
   - {fileID: 1917630877, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
 --- !u!212 &7372914427532887074
 SpriteRenderer:
@@ -891,9 +893,11 @@ MonoBehaviour:
   openSprites:
   - {fileID: -543645894, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
   - {fileID: 350843910, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
+  - {fileID: 1862408961, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
   closedSprites:
   - {fileID: 1081450933, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
   - {fileID: 1802024055, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
+  - {fileID: -2144673902, guid: 8907bf7caa0ec43448107066adc2f57e, type: 3}
 --- !u!212 &7372914428237765057
 SpriteRenderer:
   m_ObjectHideFlags: 0

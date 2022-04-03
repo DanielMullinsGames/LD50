@@ -55,9 +55,14 @@ public class QuitButtonHandler : ManagedBehaviour
                 Screen.SetResolution(300, 160, false);
                 CustomCoroutine.WaitThenExecute(0.1f, () =>
                 {
-                    CustomCoroutine.WaitOnConditionThenExecute(() => MousePosChecker.MouseOverGameWindow, () => Screen.SetResolution(900, 480, false));
                     DialogueHandler.Instance.AddDialogueEventToStack(dialogueEvents[2]);
                     quitButton.SetCollisionEnabled(true);
+
+                    CustomCoroutine.WaitOnConditionThenExecute(() => MousePosChecker.MouseOverGameWindow, () =>
+                    {
+                        Screen.SetResolution(900, 480, false);
+                        DialogueHandler.Instance.AddDialogueEventToStack(dialogueEvents[3]);
+                    });
                 });
                 break;
             case 3:
