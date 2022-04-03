@@ -187,6 +187,111 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: rpg_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1
+        width: 20
+        height: 20
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794237f07455b7a418970011c4ea4d3a
+      internalID: -736230123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rpg_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 1
+        width: 11
+        height: 40
+      alignment: 9
+      pivot: {x: 0.45454547, y: 0.125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43e8c546e35812c4a9a5a510b329cf3f
+      internalID: 528343187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rpg_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 22
+        width: 26
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2da613129163ed949adfa15df647a35c
+      internalID: 744019785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rpg_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 35
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f8096d819c50244b81e529a51fd58f8
+      internalID: -560815855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rpg_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 35
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4e5454fbb6c05e43a3a6aca74560c36
+      internalID: 189197746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -198,10 +303,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      rpg_sheet_4: -736230123
       rpg_sheet_3: 710472256
+      rpg_sheet_7: -560815855
       rpg_sheet_2: -785747137
       rpg_sheet_1: 1274311875
+      rpg_sheet_5: 528343187
       rpg_sheet_0: 704381017
+      rpg_sheet_8: 189197746
+      rpg_sheet_6: 744019785
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

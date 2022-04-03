@@ -14,6 +14,12 @@ public class RPGManager : Singleton<RPGManager>
     private RPGEntity player = default;
 
     [SerializeField]
+    private UnityEngine.UI.Text playerText = default;
+
+    [SerializeField]
+    private Transform playerSword = default;
+
+    [SerializeField]
     private BarUI expBar = default;
 
     [SerializeField]
@@ -35,7 +41,14 @@ public class RPGManager : Singleton<RPGManager>
     {
         rpgMusic = AudioController.Instance.PlaySound2D("rpg_track", 0.7f, 0f);
         rpgMusic.loop = true;
+        BuddyHandsController.Instance.SetLeftHandTarget(playerSword);
+        UpdateNameText();
         StartCoroutine(GameLoop());
+    }
+
+    private void UpdateNameText()
+    {
+        playerText.text = BuddyNameGenerator.GetName() + " ~ Lvl " + GameStatus.buddyLevel;
     }
 
     private IEnumerator GameLoop()
@@ -57,7 +70,7 @@ public class RPGManager : Singleton<RPGManager>
                 AudioController.Instance.PlaySound2D("enemy_die", 0.7f);
                 ScreenEffectsController.Instance.AddThenSubtractIntensity(ScreenEffect.RenderCanvasShake, 0.05f, 0.05f, 0.05f, 0.1f);
 
-                int expToNextLevel = Mathf.RoundToInt(Mathf.Pow(GameStatus.buddyLevel * 10f, 1.1f));
+                int expToNextLevel = Mathf.RoundToInt(Mathf.Pow(GameStatus.buddyLevel * 10f, 1.05f));
                 expBar.ShowAmount(playerExp / (float)expToNextLevel);
                 yield return new WaitForSeconds(0.5f);
 
@@ -68,9 +81,15 @@ public class RPGManager : Singleton<RPGManager>
             }
             else
             {
-                // ELSE EXIT RPG
+                Exit();
             }
         }
+    }
+
+    private void Exit()
+    {
+        Destroy(rpgMusic.gameObject);
+        BuddyHandsController.Instance.ClearHandTargets();
     }
 
     private IEnumerator LevelUp()
@@ -81,6 +100,9 @@ public class RPGManager : Singleton<RPGManager>
 
         levelUpWindow.ShowLevelUp();
         yield return new WaitWhile(() => levelUpWindow.Choosing);
+
+        CustomCoroutine.FlickerSequence(() => playerText.enabled = true, () => playerText.enabled = false, false, true, 0.1f, 3);
+        UpdateNameText();
     }
 
     private RPGEnemy InstantiateEnemy()
@@ -144,6 +166,7 @@ public class RPGManager : Singleton<RPGManager>
         }
         else
         {
+            ScreenEffectsController.Instance.AddThenSubtractIntensity(ScreenEffect.RenderCanvasShake, 0.05f, 0.05f, 0.05f, 0.1f);
             SpawnDamageSplash(damage, crit, Vector3.up * 0.2f);
         }
     }
