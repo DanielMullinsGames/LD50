@@ -53,10 +53,18 @@ public class PromoCodeWindow : ManagedBehaviour
         {
             PlaySuccessSound();
         }
-        else if (input.ToLower() == "holiday" && GameStatus.canUseHolidayCode)
+        else if (input.ToLower() == "holiday")
         {
-            PlaySuccessSound();
-            GameStatus.usedHolidayCode = true;
+            if (GameStatus.canUseHolidayCode)
+            {
+                PlaySuccessSound();
+                GameStatus.usedHolidayCode = true;
+            }
+            else if (DeathHandler.Instance.Dead && GameClock.Instance.Hours < 48)
+            {
+                PlaySuccessSound();
+                DeathHandler.Instance.ShowDeadHoliday();
+            }
         }
         else if (input.ToLower() == "swordbuddy" && GameStatus.isRPG)
         {

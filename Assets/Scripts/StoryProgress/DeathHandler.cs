@@ -61,9 +61,7 @@ public class DeathHandler : Singleton<DeathHandler>
 
             if (PlayerPrefs.GetInt("Holiday") == 1)
             {
-                holidayHideUIButtons.ForEach(x => x.SetHidden());
-                holidayDeadScene.SetActive(true);
-                AudioController.Instance.PlaySound2D("rowboat", 0.75f);
+                ShowDeadHoliday();
             }
         }
         else
@@ -80,6 +78,13 @@ public class DeathHandler : Singleton<DeathHandler>
 
             firstSequencer.SetActive(true);
         }
+    }
+
+    public void ShowDeadHoliday()
+    {
+        holidayHideUIButtons.ForEach(x => x.SetHidden());
+        holidayDeadScene.SetActive(true);
+        AudioController.Instance.PlaySound2D("rowboat", 0.75f);
     }
 
     public void AddHat()
