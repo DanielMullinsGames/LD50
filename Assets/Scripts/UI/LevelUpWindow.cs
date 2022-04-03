@@ -58,7 +58,7 @@ public class LevelUpWindow : MonoBehaviour
                 text.text = "Crit Multiplier +1";
                 break;
             case LevelUpChoice.MaxHealth:
-                text.text = "Max Health +5";
+                text.text = "Max Health +10";
                 break;
         }
     }
