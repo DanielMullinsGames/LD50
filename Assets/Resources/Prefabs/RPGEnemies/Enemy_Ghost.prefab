@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8392387172014428756, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}
       propertyPath: health
-      value: 20
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8392387172014428756, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}
       propertyPath: expReward
@@ -17,7 +17,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8392387172014428756, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}
       propertyPath: maxHealth
-      value: 20
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8392387172014428756, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}
       propertyPath: attackPower

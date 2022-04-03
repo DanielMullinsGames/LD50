@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8392387172014428756, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}
       propertyPath: health
-      value: 30
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8392387172014428756, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}
       propertyPath: expReward
@@ -17,11 +17,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8392387172014428756, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}
       propertyPath: maxHealth
-      value: 30
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392387172014428756, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}
+      propertyPath: critChance
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8392387172014428756, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}
       propertyPath: attackPower
-      value: 6
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392387172014428756, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}
+      propertyPath: critMultiplier
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8392387172014428757, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}
       propertyPath: m_RootOrder

@@ -213,11 +213,27 @@ MonoBehaviour:
   expBar: {fileID: 6056142517589580657}
   enemyPrefabsT1:
   - {fileID: 174392368874444247, guid: d21a25d17d8dddb4f82c57e4f4f02b01, type: 3}
+  - {fileID: 174392368874444247, guid: 30416cc833f18a542abdbf26534d4fc4, type: 3}
+  - {fileID: 174392368874444247, guid: d21a25d17d8dddb4f82c57e4f4f02b01, type: 3}
+  - {fileID: 174392368874444247, guid: d21a25d17d8dddb4f82c57e4f4f02b01, type: 3}
   enemyPrefabsT2:
-  - {fileID: 8392387172014428758, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}
+  - {fileID: 174392368874444247, guid: 30416cc833f18a542abdbf26534d4fc4, type: 3}
+  - {fileID: 174392368874444247, guid: 8597e29a53a67524f9927115a4de6694, type: 3}
+  - {fileID: 174392368874444247, guid: 7179209c7bb83434db20451bf64d5dd7, type: 3}
+  - {fileID: 174392368874444247, guid: 8597e29a53a67524f9927115a4de6694, type: 3}
+  - {fileID: 174392368874444247, guid: 7179209c7bb83434db20451bf64d5dd7, type: 3}
+  - {fileID: 174392368874444247, guid: d21a25d17d8dddb4f82c57e4f4f02b01, type: 3}
   enemyPrefabsT3:
-  - {fileID: 8392387172014428758, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}
+  - {fileID: 174392368874444247, guid: e988d5fd6862d5f478c7e8829c5a1d2b, type: 3}
+  - {fileID: 174392368874444247, guid: 9e245ff55e871744d8e191b98199872f, type: 3}
+  - {fileID: 174392368874444247, guid: 7179209c7bb83434db20451bf64d5dd7, type: 3}
   damageSplashPrefab: {fileID: 5272047035397510825, guid: f3a31a8a03f676a47a7f53251f09e177, type: 3}
+  levelUpEvents:
+  - {fileID: 11400000, guid: 023c336a7df3b544eb2c74fc2ac5c545, type: 2}
+  - {fileID: 11400000, guid: e9b52552f65524c49800eb13fe49b9b2, type: 2}
+  - {fileID: 11400000, guid: bd754e10a5e097b419d546571d889d92, type: 2}
+  - {fileID: 11400000, guid: d93664a04b38652409f6b5b896de74fe, type: 2}
+  - {fileID: 11400000, guid: 8562277a164471240a044e090dff686f, type: 2}
 --- !u!114 &2178845616544594622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -529,7 +545,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6738841716622713151, guid: 7278fac62fa96714993c314bdcd927c1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.32999998
+      value: 0.34
       objectReference: {fileID: 0}
     - target: {fileID: 6738841716622713151, guid: 7278fac62fa96714993c314bdcd927c1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

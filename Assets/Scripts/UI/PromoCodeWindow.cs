@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PromoCodeWindow : ManagedBehaviour
 {
+    public bool Active => window.activeInHierarchy;
+
     [SerializeField]
     private GameObject window = default;
 

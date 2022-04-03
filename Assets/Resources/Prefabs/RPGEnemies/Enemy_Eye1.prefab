@@ -8,7 +8,15 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8392387172014428756, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}
+      propertyPath: health
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392387172014428756, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}
       propertyPath: expReward
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392387172014428756, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}
+      propertyPath: maxHealth
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8392387172014428756, guid: 49fe24fc341def54ab742d1dae1f87f5, type: 3}

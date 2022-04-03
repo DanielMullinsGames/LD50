@@ -8,6 +8,9 @@ public class RPGManager : Singleton<RPGManager>
     public bool GameOver => !player.Alive;
 
     [SerializeField]
+    private PromoCodeWindow promoCodeWindow = default;
+
+    [SerializeField]
     private LevelUpWindow levelUpWindow = default;
 
     [SerializeField]
@@ -33,6 +36,9 @@ public class RPGManager : Singleton<RPGManager>
 
     [SerializeField]
     private GameObject damageSplashPrefab = default;
+
+    [SerializeField]
+    private List<DialogueEvent> levelUpEvents = default;
 
     private int playerExp;
     private AudioSource rpgMusic;
@@ -65,17 +71,19 @@ public class RPGManager : Singleton<RPGManager>
             if (player.Alive)
             {
                 yield return new WaitForSeconds(0.1f);
+
                 playerExp += enemy.expReward;
                 Destroy(enemy.gameObject);
                 AudioController.Instance.PlaySound2D("enemy_die", 0.7f);
                 ScreenEffectsController.Instance.AddThenSubtractIntensity(ScreenEffect.RenderCanvasShake, 0.05f, 0.05f, 0.05f, 0.1f);
 
-                int expToNextLevel = Mathf.RoundToInt(Mathf.Pow(GameStatus.buddyLevel * 10f, 1.035f));
+                int expToNextLevel = Mathf.RoundToInt(Mathf.Pow(GameStatus.buddyLevel * 10f, 1.025f));
                 expBar.ShowAmount(playerExp / (float)expToNextLevel);
                 yield return new WaitForSeconds(0.5f);
 
                 if (playerExp > expToNextLevel)
                 {
+                    yield return new WaitWhile(() => promoCodeWindow.Active);
                     yield return LevelUp();
                 }
             }
@@ -90,6 +98,7 @@ public class RPGManager : Singleton<RPGManager>
     {
         Destroy(rpgMusic.gameObject);
         BuddyHandsController.Instance.ClearHandTargets();
+        gameObject.SetActive(false);
     }
 
     private IEnumerator LevelUp()
@@ -103,6 +112,25 @@ public class RPGManager : Singleton<RPGManager>
 
         CustomCoroutine.FlickerSequence(() => playerText.enabled = true, () => playerText.enabled = false, false, true, 0.1f, 3);
         UpdateNameText();
+
+        switch (GameStatus.buddyLevel)
+        {
+            case 2:
+                DialogueHandler.Instance.AddDialogueEventToStack(levelUpEvents[0]);
+                break;
+            case 3:
+                DialogueHandler.Instance.AddDialogueEventToStack(levelUpEvents[1]);
+                break;
+            case 4:
+                DialogueHandler.Instance.AddDialogueEventToStack(levelUpEvents[2]);
+                break;
+            case 7:
+                DialogueHandler.Instance.AddDialogueEventToStack(levelUpEvents[3]);
+                break;
+            case 10:
+                DialogueHandler.Instance.AddDialogueEventToStack(levelUpEvents[4]);
+                break;
+        }
     }
 
     private RPGEnemy InstantiateEnemy()
@@ -135,11 +163,12 @@ public class RPGManager : Singleton<RPGManager>
         {
             yield return EntityAttackEntity(enemy, player);
             yield return new WaitForSeconds(0.4f);
-
+            yield return new WaitWhile(() => promoCodeWindow.Active);
             if (player.Alive)
             {
                 yield return EntityAttackEntity(player, enemy);
                 yield return new WaitForSeconds(0.4f);
+                yield return new WaitWhile(() => promoCodeWindow.Active);
             }
         }
     }
