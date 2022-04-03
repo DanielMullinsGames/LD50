@@ -23,6 +23,9 @@ public class RPGManager : Singleton<RPGManager>
     private Transform playerSword = default;
 
     [SerializeField]
+    private Sprite promoSword = default;
+
+    [SerializeField]
     private BarUI expBar = default;
 
     [SerializeField]
@@ -42,6 +45,7 @@ public class RPGManager : Singleton<RPGManager>
 
     private int playerExp;
     private AudioSource rpgMusic;
+    private bool usedPromoSword;
 
     private void Start()
     {
@@ -49,7 +53,21 @@ public class RPGManager : Singleton<RPGManager>
         rpgMusic.loop = true;
         BuddyHandsController.Instance.SetLeftHandTarget(playerSword);
         UpdateNameText();
+        GameStatus.isRPG = true;
         StartCoroutine(GameLoop());
+    }
+
+    public void SwordPromoCode()
+    {
+        if (!usedPromoSword)
+        {
+            player.attackPower += 10;
+            usedPromoSword = true;
+
+            var swordSR = playerSword.GetComponent<SpriteRenderer>();
+            swordSR.sprite = promoSword;
+            CustomCoroutine.FlickerSequence(() => swordSR.enabled = true, () => swordSR.enabled = false, false, true, 0.07f, 4);
+        }
     }
 
     private void UpdateNameText()
@@ -101,6 +119,7 @@ public class RPGManager : Singleton<RPGManager>
         Destroy(rpgMusic.gameObject);
         BuddyHandsController.Instance.ClearHandTargets();
         gameObject.SetActive(false);
+        GameStatus.isRPG = false;
     }
 
     private IEnumerator LevelUp()

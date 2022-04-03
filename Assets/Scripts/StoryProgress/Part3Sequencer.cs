@@ -8,6 +8,9 @@ public class Part3Sequencer : Sequencer
     private UIButton questButton = default;
 
     [SerializeField]
+    private UIButton holidayButton = default;
+
+    [SerializeField]
     private RPGManager rpgManager = default;
 
     private bool buttonPressed;
@@ -31,8 +34,12 @@ public class Part3Sequencer : Sequencer
         yield return new WaitUntil(() => rpgManager.GameOver);
         yield return new WaitForSeconds(3f);
 
+        GameStatus.canUseHolidayCode = true;
         DialogueHandler.Instance.AddDialogueEventToStack(dialogueEvents[2]);
         yield return new WaitUntil(() => DialogueHandler.Instance.NoDialoguePlaying);
+
+        yield return new WaitUntil(() => GameStatus.usedHolidayCode);
+        holidayButton.Show();
     }
 
     public void OnButtonPressed()

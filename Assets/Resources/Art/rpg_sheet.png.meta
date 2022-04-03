@@ -259,7 +259,7 @@ TextureImporter:
         width: 32
         height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -280,7 +280,7 @@ TextureImporter:
         width: 32
         height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -288,6 +288,27 @@ TextureImporter:
       bones: []
       spriteID: d4e5454fbb6c05e43a3a6aca74560c36
       internalID: 189197746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rpg_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 44
+        width: 14
+        height: 48
+      alignment: 9
+      pivot: {x: 0.35714287, y: 0.104166664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9cbf1bb075562a4b80504c9841f7df7
+      internalID: -1973634763
       vertices: []
       indices: 
       edges: []
@@ -309,6 +330,7 @@ TextureImporter:
       rpg_sheet_2: -785747137
       rpg_sheet_1: 1274311875
       rpg_sheet_5: 528343187
+      rpg_sheet_9: -1973634763
       rpg_sheet_0: 704381017
       rpg_sheet_8: 189197746
       rpg_sheet_6: 744019785

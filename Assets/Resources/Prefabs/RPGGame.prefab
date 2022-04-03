@@ -211,6 +211,7 @@ MonoBehaviour:
   player: {fileID: 2178845616544594622}
   playerText: {fileID: 4880209148324576236}
   playerSword: {fileID: 596252392645817553}
+  promoSword: {fileID: -1973634763, guid: 74a7c07b622a3c240870bb68a2750df5, type: 3}
   expBar: {fileID: 6056142517589580657}
   enemyPrefabsT1:
   - {fileID: 174392368874444247, guid: d21a25d17d8dddb4f82c57e4f4f02b01, type: 3}

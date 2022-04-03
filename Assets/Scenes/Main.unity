@@ -1999,6 +1999,7 @@ MonoBehaviour:
   waitBeforeNext: 0
   activateWhenComplete: {fileID: 546036360}
   questButton: {fileID: 1132433162}
+  holidayButton: {fileID: 417360423}
   rpgManager: {fileID: 249069962}
 --- !u!1001 &1332840856
 PrefabInstance:

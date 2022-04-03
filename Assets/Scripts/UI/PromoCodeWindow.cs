@@ -49,6 +49,20 @@ public class PromoCodeWindow : ManagedBehaviour
         {
             PlaySuccessSound();
         }
+        else if (input.ToLower() == "ponies")
+        {
+            PlaySuccessSound();
+        }
+        else if (input.ToLower() == "holiday" && GameStatus.canUseHolidayCode)
+        {
+            PlaySuccessSound();
+            GameStatus.usedHolidayCode = true;
+        }
+        else if (input.ToLower() == "swordbuddy" && GameStatus.isRPG)
+        {
+            PlaySuccessSound();
+            RPGManager.Instance.SwordPromoCode();
+        }
         else
         {
             AudioController.Instance.PlaySound2D("promo_fail");
