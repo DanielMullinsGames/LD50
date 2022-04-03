@@ -23,6 +23,8 @@ public abstract class Sequencer : ManagedBehaviour
         yield return Sequence();
 
         yield return new WaitForSeconds(waitBeforeNext);
+        yield return new WaitUntil(() => DialogueHandler.Instance.NoDialoguePlaying);
+        yield return new WaitForSeconds(0.5f);
         if (activateWhenComplete != null)
         {
             activateWhenComplete.SetActive(true);

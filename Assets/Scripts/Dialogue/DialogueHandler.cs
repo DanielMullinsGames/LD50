@@ -11,6 +11,9 @@ public class DialogueHandler : Singleton<DialogueHandler>
     private DialogueText dialogueText = default;
 
     [SerializeField]
+    private BuddyEyes eyes = default;
+
+    [SerializeField]
     private BuddyMouth mouth = default;
 
     [SerializeField]
@@ -23,6 +26,7 @@ public class DialogueHandler : Singleton<DialogueHandler>
     {
         dialogueText.DisplayCharacter += OnDisplayCharacter;
         dialogueText.CompletedLine += OnMessageEnded;
+        dialogueText.EmotionChange += OnEmotionChange;
     }
 
     public void AddDialogueEventToStack(DialogueEvent dialogueEvent)
@@ -82,6 +86,12 @@ public class DialogueHandler : Singleton<DialogueHandler>
                 dialogueText.Clear();
             }
         }
+    }
+
+    private void OnEmotionChange(Emotion emotion)
+    {
+        eyes.SetEmotion(emotion);
+        mouth.SetEmotion(emotion);
     }
 
     private void OnDisplayCharacter(string message, int index)

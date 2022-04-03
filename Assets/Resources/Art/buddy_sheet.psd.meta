@@ -385,7 +385,7 @@ TextureImporter:
         width: 46
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -393,6 +393,90 @@ TextureImporter:
       bones: []
       spriteID: 30552eba8953cec459c92859e8ebfbd3
       internalID: -1908552352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buddy_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 113
+        width: 32
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1679f88a01a323743acae0ae43d0f533
+      internalID: 350843910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buddy_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 113
+        width: 32
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b1ff65a5fcb7b4e93875b7dc5b629b
+      internalID: 1802024055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buddy_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 135
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8178e95fe65d79243873cebc42a73d8f
+      internalID: 1917630877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buddy_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 135
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bac4f6a3da7f274419407f9945bccfd3
+      internalID: -1046800549
       vertices: []
       indices: 
       edges: []
@@ -415,13 +499,17 @@ TextureImporter:
       buddy_sheet_2: 1138124232
       buddy_sheet_8: -1692842252
       buddy_sheet_0: -543645894
+      buddy_sheet_14: 350843910
       buddy_sheet_9: 802142134
       buddy_sheet_11: 238423466
       buddy_sheet_1: 1081450933
       buddy_sheet_6: 1616828446
       buddy_sheet_4: 1140199513
+      buddy_sheet_15: 1802024055
+      buddy_sheet_16: 1917630877
       buddy_sheet_3: 277388947
       buddy_sheet_10: 2108487374
+      buddy_sheet_17: -1046800549
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 1

@@ -83,6 +83,7 @@ public class DialogueText : ManagedBehaviour
             spawnedLetters.Add(SpawnLetter(pair.Value, pair.Key, index));
             index++;
         }
+        HideAllLetters();
 
         uiText.text = "";
     }

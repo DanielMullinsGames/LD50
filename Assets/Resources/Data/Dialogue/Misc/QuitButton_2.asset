@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8457d4647e2ef3a408d1f106ee40b463, type: 3}
-  m_Name: Part1_1
+  m_Name: QuitButton_2
   m_EditorClassIdentifier: 
-  interruptBehaviour: 1
+  interruptBehaviour: 0
   lines:
-  - If you stay around
-  - I can entertain you.
+  - '[e:Shocked][t:4]IF YOU QUIT I DIE![w:0.5]'
+  - '[e:Shocked][t:4]WAS I NOT CLEAR?[w:0.5]'

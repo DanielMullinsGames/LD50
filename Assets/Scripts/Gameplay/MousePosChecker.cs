@@ -21,7 +21,7 @@ public class MousePosChecker : ManagedBehaviour
             secondsMouseOutOfWindow = 0f;
             playedDialogueOutOfWindow = false;
         }
-        else
+        else if (Screen.currentResolution.width > 500) // HACK to not trigger events while shrinking window size for quit button handler
         {
             secondsMouseOutOfWindow += Time.deltaTime;
 

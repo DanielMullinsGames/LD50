@@ -3,7 +3,7 @@ public enum Emotion
 {
     None,
     Neutral,
-    Quiet,
+    Shocked,
     Happy,
     Sad,
     Angry,
