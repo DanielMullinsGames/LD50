@@ -707,6 +707,7 @@ GameObject:
   - component: {fileID: 7372914427805977220}
   - component: {fileID: 2189817687206492851}
   - component: {fileID: 1559945057379614187}
+  - component: {fileID: 8427526730438860158}
   m_Layer: 6
   m_Name: Buddy
   m_TagString: Untagged
@@ -780,6 +781,25 @@ MonoBehaviour:
   rightHandIdleMovement: {fileID: 7372914426873021221}
   leftHandMatchPos: {fileID: 5332595354345203941}
   rightHandMatchPos: {fileID: 3338295378067454691}
+--- !u!114 &8427526730438860158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7372914427805977221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0f7c63d183bb8449f6b6dd9ef8b948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coloredRenderers:
+  - {fileID: 7372914427244547638}
+  - {fileID: 7372914427196926957}
+  - {fileID: 7372914428342025751}
+  - {fileID: 7372914426873021223}
+  - {fileID: 7372914426540062480}
+  - {fileID: 7372914427828542496}
 --- !u!1 &7372914427828542498
 GameObject:
   m_ObjectHideFlags: 0

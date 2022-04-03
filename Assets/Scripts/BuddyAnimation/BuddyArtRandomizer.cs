@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BuddyArtRandomizer : ManagedBehaviour
 {
+    public static Color bodyColor = default;
+
     [SerializeField]
     private SpriteRenderer headRenderer = default;
 
@@ -41,7 +43,7 @@ public class BuddyArtRandomizer : ManagedBehaviour
     {
         headRenderer.sprite = headSprites[Random.Range(0, headSprites.Count)];
         bodyRenderer.sprite = bodySprites[Random.Range(0, bodySprites.Count)];
-        Color randomColor = spriteColors[Random.Range(0, spriteColors.Count)];
-        coloredRenderers.ForEach(x => x.color = randomColor);
+        bodyColor = spriteColors[Random.Range(0, spriteColors.Count)];
+        coloredRenderers.ForEach(x => x.color = bodyColor);
     }
 }
