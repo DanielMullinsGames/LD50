@@ -51,6 +51,7 @@ MonoBehaviour:
   - {fileID: 6092659537098567036, guid: f34f0505f0c8d0d4e8548ae2d0ac1c62, type: 3}
   - {fileID: 6092659537098567036, guid: b0b95458fdfc1b54ea52d0e71514be47, type: 3}
   bagelPrefab: {fileID: 6092659537098567036, guid: de4805d017e94f04685e6dfbc3f54924, type: 3}
+  burgerPrefab: {fileID: 6092659537098567036, guid: 56194cf9cb4be5146960cacd67ff38ca, type: 3}
   dropFoodDialogues:
   - {fileID: 11400000, guid: 9a765ac133abf34449d2c19a6c26fdab, type: 2}
   - {fileID: 11400000, guid: 097d9b26d68b9cc438694447f076ed51, type: 2}

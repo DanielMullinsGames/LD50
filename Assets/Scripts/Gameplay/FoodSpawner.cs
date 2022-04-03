@@ -19,6 +19,9 @@ public class FoodSpawner : Singleton<FoodSpawner>
     private GameObject bagelPrefab = default;
 
     [SerializeField]
+    private GameObject burgerPrefab = default;
+
+    [SerializeField]
     private List<DialogueEvent> dropFoodDialogues = new List<DialogueEvent>();
 
     private List<GameObject> activeFood = new List<GameObject>();
@@ -33,6 +36,14 @@ public class FoodSpawner : Singleton<FoodSpawner>
         if (!foodPrefabs.Contains(bagelPrefab))
         {
             foodPrefabs.Add(bagelPrefab);
+        }
+    }
+
+    public void UnlockBurger()
+    {
+        if (!foodPrefabs.Contains(burgerPrefab))
+        {
+            foodPrefabs.Add(burgerPrefab);
         }
     }
 

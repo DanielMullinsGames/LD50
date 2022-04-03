@@ -76,6 +76,11 @@ public class PromoCodeWindow : ManagedBehaviour
             PlaySuccessSound();
             FoodSpawner.Instance.UnlockBagel();
         }
+        else if (input.ToLower() == "burgerbuddy")
+        {
+            PlaySuccessSound();
+            FoodSpawner.Instance.UnlockBurger();
+        }
         else
         {
             AudioController.Instance.PlaySound2D("promo_fail");
