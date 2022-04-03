@@ -62,7 +62,7 @@ public class LongTermSequencer : Sequencer
 
     private void TryPlayDialogueEventForTime()
     {
-        if (GameClock.Instance.Minutes > 30 && GameClock.Instance.Hours < 24 && !playedHolidayDialogue1)
+        if (GameClock.Instance.Minutes > 20 && GameClock.Instance.Hours < 24 && !playedHolidayDialogue1)
         {
             playedHolidayDialogue1 = true;
             DialogueHandler.Instance.AddDialogueEventToStack(dialogueEvents[0]);

@@ -71,6 +71,11 @@ public class PromoCodeWindow : ManagedBehaviour
             PlaySuccessSound();
             RPGManager.Instance.SwordPromoCode();
         }
+        else if (input.ToLower() == "bagelbuddy")
+        {
+            PlaySuccessSound();
+            FoodSpawner.Instance.UnlockBagel();
+        }
         else
         {
             AudioController.Instance.PlaySound2D("promo_fail");

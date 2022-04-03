@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2858536303332933925
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2858536303332933914}
+  - component: {fileID: 2858536303332933915}
+  m_Layer: 0
+  m_Name: FoodSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2858536303332933914
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2858536303332933925}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2858536303332933915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2858536303332933925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 315ab8101f213fc4d80498db83bc55c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clearFoodButton: {fileID: 0}
+  clearedFoodEvent: {fileID: 11400000, guid: 38dc529d5a39f6a4fa1bc167adf139d0, type: 2}
+  foodPrefabs:
+  - {fileID: 6092659537098567036, guid: 65751cbe042d7da4895edf7208b12a96, type: 3}
+  - {fileID: 6092659537098567036, guid: f34f0505f0c8d0d4e8548ae2d0ac1c62, type: 3}
+  - {fileID: 6092659537098567036, guid: b0b95458fdfc1b54ea52d0e71514be47, type: 3}
+  bagelPrefab: {fileID: 6092659537098567036, guid: de4805d017e94f04685e6dfbc3f54924, type: 3}
+  dropFoodDialogues:
+  - {fileID: 11400000, guid: 9a765ac133abf34449d2c19a6c26fdab, type: 2}
+  - {fileID: 11400000, guid: 097d9b26d68b9cc438694447f076ed51, type: 2}
+  - {fileID: 11400000, guid: fbd1cb953bbb0b74eae83b019f05234b, type: 2}
+  - {fileID: 11400000, guid: 0a9322c62c96a0948abf16c9749d13da, type: 2}
+  - {fileID: 11400000, guid: 5f577ef7efec49f4cbf37a557187c2b4, type: 2}
+  - {fileID: 11400000, guid: 9c9f2ad71672de043aff0a8a5cf6d0e7, type: 2}
