@@ -28,7 +28,7 @@ public class BuddyNameGenerator
         "al",
         "a",
         "op",
-        "ant",
+        "an",
         "ash",
         "uck",
     };

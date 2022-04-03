@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FoodSpawner : ManagedBehaviour
+public class FoodSpawner : Singleton<FoodSpawner>
 {
+    public bool NoFood => activeFood.Count == 0;
+
     [SerializeField]
     private UIButton clearFoodButton = default;
 
@@ -17,6 +19,11 @@ public class FoodSpawner : ManagedBehaviour
     private List<DialogueEvent> dropFoodDialogues = new List<DialogueEvent>();
 
     private List<GameObject> activeFood = new List<GameObject>();
+
+    public void AddObjectToFoodList(GameObject obj)
+    {
+        activeFood.Add(obj);
+    }
 
     public void SpawnFood()
     {
@@ -67,6 +74,7 @@ public class FoodSpawner : ManagedBehaviour
     {
         GameStatus.pressedClearFoodButton = true;
         activeFood.ForEach(x => Destroy(x));
+        activeFood.Clear();
         DialogueHandler.Instance.AddDialogueEventToStack(clearedFoodEvent);
     }
 }

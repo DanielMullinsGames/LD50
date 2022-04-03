@@ -47,5 +47,6 @@ public class BallThrower : TimedBehaviour
         newBall.SetActive(true);
         newBall.transform.position = ballObj.transform.position;
         newBall.GetComponent<Rigidbody2D>().AddForce(Vector2.up * CustomRandom.RandomBetween(150f, 200f) + Vector2.right * CustomRandom.RandomBetween(-5f, 100f));
+        FoodSpawner.Instance.AddObjectToFoodList(newBall);
     }
 }

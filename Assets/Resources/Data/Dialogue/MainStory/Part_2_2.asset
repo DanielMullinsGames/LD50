@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8457d4647e2ef3a408d1f106ee40b463, type: 3}
-  m_Name: Part_2
+  m_Name: Part_2_2
   m_EditorClassIdentifier: 
-  interruptBehaviour: 1
+  interruptBehaviour: 2
   lines:
-  - By the way...[w:0.4]
-  - The name's #NAME#![w:0.4]
-  - Now let's play a game.[w:0.4]
+  - Yay![w:0.4] Congrats.[w:0.3]
+  - That was fun...[w:0.5]
+  - '[e:Shocked][t:5]Right?[w:1]'
+  - 'We should probably '
+  - clean up the balls...[w:2]
